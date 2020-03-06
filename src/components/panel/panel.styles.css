@@ -1,0 +1,49 @@
+body{
+    margin :0px;
+
+}
+.panel {
+    flex-grow: 1;
+    width:40vw;
+    background-color: pink;
+}
+
+textarea, label {
+    display:block;
+    font-weight: 100;
+}
+
+
+.langtitle{
+    display: block;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    font-weight: 100;
+    font-size: 18px;
+
+
+
+}
+
+textarea {
+    width: 98.5%;
+    height: 98vh;
+    position: relative;
+    top: 7px;
+    border: none;
+
+
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+iframe {
+    position: relative;
+    right: 2px;
+    width: 50vw;
+
+
+}
