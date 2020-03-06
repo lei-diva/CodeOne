@@ -1,17 +1,11 @@
-.panel-list {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    height: 100vh;
+.langtitle, iframe {
+    display: block;
 }
-
 iframe {
-    border: none;
-    border-top: 1px solid pink;
-    margin-top: 27px;
-    margin-left: -54px;
+    position: relative;
+    top: 7px;
+    border: 1px solid lightgray;
+    height: 63vh;
 
 }
+

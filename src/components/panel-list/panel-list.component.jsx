@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Panel } from '../panel/panel.component';
 import './panel-list.styles.css'
-import '../panel/panel.styles.css'
+import { Col, Form, Container} from 'react-bootstrap';
 
 class PanelList extends Component{
     constructor(){
@@ -37,19 +37,31 @@ class PanelList extends Component{
 
     render (){
       return(
-        <div className="panel-list">
+        <Container>
+            <Form.Row>
         {this.props.panels.map((panel, id) =>{
-            return <Panel name={panel} key={id} handleChange={e=>{
-                const Lang = panel
-                this.setState({[Lang]: e.target.value})
-                }}>
-                </Panel>
+            return (
+
+                    <Panel
+                        display={this.props.display[id]}
+                        name={panel}
+                        key={id}
+                        handleChange={e=>{
+                            const Lang = panel
+                            this.setState({[Lang]: e.target.value})
+                            }}
+                    >
+                    </Panel>
+
+                )
 
         })}
+            <Col md className={this.props.display[3]}>
             <span className="langtitle">Output</span>
             <iframe id="out" title="output"></iframe>
-
-        </div>
+            </Col>
+            </Form.Row>
+        </Container>
 
       );
     }

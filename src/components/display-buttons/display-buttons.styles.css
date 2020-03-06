@@ -1,0 +1,19 @@
+Button.hide {
+    background-color: #292b2c;
+    color: white;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+Button.show {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+Button:active, Button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+
+}
