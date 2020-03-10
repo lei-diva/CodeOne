@@ -1,0 +1,13 @@
+.navbar {
+    /*background: linear-gradient(to left,#ddd6f3, #faaca8);*/
+    background: linear-gradient(to right, #9796f0, #fbc7d4);
+    height: 60px;
+}
+
+.logo {
+    width: 240px;
+    position: relative;
+    top: 13px;
+    right: 20px;
+
+}

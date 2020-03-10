@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Panel } from '../panel/panel.component';
 import './panel-list.styles.css'
-import { Col, Form, Container} from 'react-bootstrap';
+import { Row, Col} from 'react-bootstrap';
 
 class PanelList extends Component{
     constructor(){
@@ -10,7 +10,9 @@ class PanelList extends Component{
         this.state = {
             Html : '',
             Css: '',
-            Js: ''
+            Js: '',
+            /*autocomplete: false,
+            autostring: ''*/
         }
 
     }
@@ -35,10 +37,36 @@ class PanelList extends Component{
     }
 
 
+    typeUpdate = (letter, panel, e) =>{
+        const Lang = panel
+        this.setState({[Lang]: letter})
+        /*
+        if (letter === '<') {
+            console.log("here");
+            this.setState({autostring : '</', autocomplete: true});
+            console.log("after");
+        }else if(letter === '>'){
+            let temp = this.setState.autostring;
+            temp = temp + letter;
+            this.setState({autostring: temp});
+            this.setState({autocomplete: false});
+            console.log(this.state.autostring);
+        } else if (this.state.autocomplete) {
+            let temp = this.setState.autostring;
+            temp = temp + letter;
+
+            this.setState({autostring: temp});
+
+        } else {
+            console.log('nothing');
+        }*/
+    }
+
     render (){
       return(
-        <Container>
-            <Form.Row>
+        <div className="panel_out">
+            <Row noGutters="true" className="panels">
+
         {this.props.panels.map((panel, id) =>{
             return (
 
@@ -46,22 +74,18 @@ class PanelList extends Component{
                         display={this.props.display[id]}
                         name={panel}
                         key={id}
-                        handleChange={e=>{
-                            const Lang = panel
-                            this.setState({[Lang]: e.target.value})
-                            }}
+                        handleChange={this.typeUpdate}
                     >
                     </Panel>
 
                 )
 
         })}
-            <Col md className={this.props.display[3]}>
-            <span className="langtitle">Output</span>
-            <iframe id="out" title="output"></iframe>
+            <Col lg={true}>
+            <iframe className={this.props.display[3]} id="out" title="output"></iframe>
             </Col>
-            </Form.Row>
-        </Container>
+            </Row>
+        </div>
 
       );
     }

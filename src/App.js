@@ -3,6 +3,7 @@ import PanelList from './components/panel-list/panel-list.component';
 import { NavBar } from './components/navbar/navbar.component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
+import './App.css';
 
 class App extends Component {
   constructor () {
@@ -10,7 +11,7 @@ class App extends Component {
 
     this.state = {
       panels: ['Html', 'Css', 'Js'],
-      display: ['show', 'show', 'show','show'],
+      display: ['show', 'show', 'show'],
       files: ['index.html', 'style.css', 'script.js']
     }
   }
@@ -30,19 +31,21 @@ class App extends Component {
   }
   render () {
     return (
-
-      <div>
+      <div className="general">
       <NavBar
       panels={this.state.panels}
       change={this.changeDisplay}
       display={this.state.display}
       ></NavBar>
-      <Container>
+      <Container className="panellist">
         <PanelList
         panels={this.state.panels}
         display={this.state.display}
         ></PanelList>
       </Container>
+
+
+
       </div>
     );
   }

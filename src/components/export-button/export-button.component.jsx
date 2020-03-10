@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Button} from 'react-bootstrap'
+import Down from '../../down-arrow.png';
+import './export-button.styles.css';
 
 class ExportButton extends Component{
 
@@ -13,10 +14,16 @@ class ExportButton extends Component{
   render() {
     return (
     <div>
-    <Button variant="dark"
-     onClick={(e) => {this.download('test.html', '<p>Hello world!</p>')}}>
-    Export
-    </Button>
+    <button
+      className="export-button"
+     onClick={(e) => {
+       this.download('index.html', '<p>Hello world!</p>');
+       this.download('styles.css', 'p {color: red};');
+       this.download('script.js', 'alert("hi")');
+       }}>
+    <img className="export-icon" alt="export" src={Down}></img>
+
+    </button>
 
     </div>
 )}

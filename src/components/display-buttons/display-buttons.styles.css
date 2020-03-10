@@ -1,19 +1,28 @@
-Button.hide {
-    background-color: #292b2c;
-    color: white;
-    outline: none;
-    box-shadow: none;
-    border: none;
+button.hide {
+    color: #343434;
+
+    display: inline-block !important;
 }
-Button.show {
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
+button.show {
+    color:#ffffff;
+
 }
 
-Button:active, Button:focus {
+
+button:hover {
+    transform: scale(1.05);
+    font-weight: 300;
+}
+button {
+    font-size: 22px !important;
+    border-radius: 0px;
+    height: 40px;
+    width: 150px;
+    background-color: Transparent;
     outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
+    border: none;
+    cursor:pointer;
+    font-weight: 300 !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
 
 }

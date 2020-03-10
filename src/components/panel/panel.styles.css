@@ -3,13 +3,24 @@
     display: none;
 }
 
+
+
 .codearea {
+    border: 1px solid white !important;
     outline: none !important;
     box-shadow: none !important;
-    border: 1px solid lightgray;
+    margin: 0 !important;
+    padding: 5px 10px !important;
+    background-color: #1A1919 !important;
+    color: white !important;
+    font-weight: 200 !important;
+    border-radius: 0 !important;
+    border-right: none !important;
+    flex-grow: 1;
 }
 
 .codearea:focus {
-    border: 3px solid lightgray !important;
+    border: 3px solid white !important;
 }
+
 
