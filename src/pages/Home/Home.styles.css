@@ -74,7 +74,7 @@
     z-index: 5;
     font-size: 30px;
     top: 120px;
-    left: 220px;
+    left: 210px;
     font-weight: 200;
     width: 500px;
 }
@@ -131,4 +131,11 @@
 .home-button:focus:after {
     outline: none;
     transform: scale(1.00);
+}
+
+.guest-button:hover{
+    outline:none;
+}
+.guest-button:focus{
+    outline:none;
 }

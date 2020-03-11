@@ -17,8 +17,8 @@ export const Home = () => (
 
     <Container>
     <div className="home-panel"/>
-    <div className="subtitle">Code One is the perfect playground for front end developers.
-    Create your projects and watch your live browser update immediately along side your code!</div>
+    <div className="subtitle">Code One is the perfect playground environment for front end developers.
+    Learn, build, and test with our live output browser that updates instantly alongside your code!</div>
     <div><SlideShow className="slideshow"></SlideShow></div>
     <div className="sign-in">
     <button className="home-button"><span>Sign In</span></button>
