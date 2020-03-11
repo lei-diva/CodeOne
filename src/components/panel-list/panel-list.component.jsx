@@ -18,16 +18,16 @@ class PanelList extends Component{
     }
 
     componentDidMount () {
-        window.onload = function(){
             document.getElementById("out").contentWindow.document.write('<html><head><style type="text/css"></style></head></body></body></html');
-
-        }
     }
 
-    componentDidUpdate () {
+    outputUpdate = () => {
+
         var html = document.getElementById("out").contentWindow.document.getElementsByTagName('body')[0];
+        console.log(html);
         html.innerHTML = this.state.Html;
         var css = document.getElementById("out").contentWindow.document.getElementsByTagName('style')[0];
+        console.log(css);
         css.innerHTML = this.state.Css;
         try {
             document.getElementById("out").contentWindow.eval(this.state.Js);
@@ -36,10 +36,11 @@ class PanelList extends Component{
         }
     }
 
-
     typeUpdate = (letter, panel, e) =>{
+        console.log("typeupdate");
         const Lang = panel
-        this.setState({[Lang]: letter})
+        this.setState({[Lang]: letter}, this.outputUpdate);
+
         /*
         if (letter === '<') {
             console.log("here");

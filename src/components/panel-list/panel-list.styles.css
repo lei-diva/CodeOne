@@ -12,8 +12,9 @@ iframe {
     flex-grow:1;
     top: 68px;
     height: 92.5vh !important;
-    width: 100%;
-    border: 4px solid #86c5fc;
+    width: 100% !important;
+    border: 4px solid rgb(216, 212, 212) ;
+
 
 }
 

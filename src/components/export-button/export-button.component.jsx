@@ -15,7 +15,7 @@ class ExportButton extends Component{
     return (
     <div>
     <button
-      className="export-button"
+      className="export-button display-button"
      onClick={(e) => {
        this.download('index.html', '<p>Hello world!</p>');
        this.download('styles.css', 'p {color: red};');

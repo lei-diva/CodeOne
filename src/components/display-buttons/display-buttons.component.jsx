@@ -1,18 +1,21 @@
 import React from 'react';
-
 import './display-buttons.styles.css';
 
 export const DisplayButtons = (props) =>
 (
-    props.panels.map((panel, id) => (
+    <div className="display_buttons">
+    {props.panels.map((panel, id) => (
+
             <button
-                className={props.display[id]}
+                className={`${props.display[id]} display-button`}
                 key={id}
                 onClick={(e) => {props.change(id, e)}}>
-            {panel}
+            {panel.toUpperCase()}
             </button>
 
         )
-    )
+    )}
+    </div>
+
 
 );

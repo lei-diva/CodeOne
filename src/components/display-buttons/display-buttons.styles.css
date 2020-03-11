@@ -1,20 +1,28 @@
-button.hide {
+.display-button.hide {
     color: #343434;
-
+    transform:scale(0.95);
+    /*color: #343434;*/
+    /*opacity: 50%;*/
     display: inline-block !important;
+    border: none;
+
+
+
 }
-button.show {
+.display-button.show {
+    /*border: 1px solid white;*/
     color:#ffffff;
-
+    border-radius: 30px !important;
 }
 
 
-button:hover {
-    transform: scale(1.05);
-    font-weight: 300;
+.display-button:hover {
+    border-radius: 30px !important;
+    transform: scale(1.03);
+
 }
-button {
-    font-size: 22px !important;
+.display-button {
+    font-size: 20px !important;
     border-radius: 0px;
     height: 40px;
     width: 150px;
@@ -22,7 +30,13 @@ button {
     outline: none !important;
     border: none;
     cursor:pointer;
+    /*font-family: 'Abel', sans-serif;*/
+    margin-right: 50px !important;
     font-weight: 300 !important;
-    font-family: 'Roboto Condensed', sans-serif !important;
 
+}
+
+.display_buttons {
+    position: relative;
+    left: 360px;
 }

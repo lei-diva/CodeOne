@@ -1,11 +1,22 @@
 .export-icon {
-    width: 30px;
-    height: 28px;
-    display: block;
+    width: 17px;
+    height: 17px;
+    position: relative;
+    bottom: 2px;
+    text-align: center !important;
 }
 
+.export-button:hover {
+    transform: none !important;
+}
 
 .export-button {
-    width: 200px;
-
+    position: relative;
+    left: 600px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50% !important;
+    border: 1px solid white;
 }
+
+

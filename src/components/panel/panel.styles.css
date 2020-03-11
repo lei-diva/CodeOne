@@ -14,13 +14,19 @@
     background-color: #1A1919 !important;
     color: white !important;
     font-weight: 200 !important;
-    border-radius: 0 !important;
     border-right: none !important;
     flex-grow: 1;
+    height: 92.5vh !important;
 }
 
 .codearea:focus {
     border: 3px solid white !important;
+}
+
+.codearea:hover {
+    border: 3px solid white !important;
+
+
 }
 
 
