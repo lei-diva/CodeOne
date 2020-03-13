@@ -9,22 +9,23 @@ import './slide-show.styles.css';
 export const SlideShow = () => (
 <Carousel interval="6000" className="carousel" prevIcon={<span id="prevIcon">&#60;</span>} nextIcon={<span id="nextIcon">&#62;</span>}>
   <Carousel.Item className="item">
-            <img className="slide" src={first}></img>
+            <img className="slides" src={first}></img>
           <Carousel.Caption>
       <h3>First slide label</h3>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item className="item">
-  <img className="slide" src={second}></img>
+
 
     <Carousel.Caption>
       <h3>Second slide label</h3>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item className="item">
-    <video autoplay muted controls>
+{/*
+            <video autoplay muted controls>
               <source src={firstslide} type="video/mp4"></source>
-              </video>
+</video>*/}
 
     <Carousel.Caption>
       <h3>Third slide label</h3>

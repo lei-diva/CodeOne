@@ -6,8 +6,9 @@
     top: 12vh;
     left: 42px;
     position: relative;
-    border-radius: 0px 10px 10px 0px;
-    background: rgba(82, 90, 150, 0.1);
+    border-radius: 5px 5px 5px 5px;
+    background-color: transparent;
+    /*background: rgba(82, 90, 150, 0.1);*/
 }
 
 
@@ -17,7 +18,7 @@
     width: 40vw;
 
 }
-
+/*
 video {
     display: none;
     width: 40vw;
@@ -25,14 +26,14 @@ video {
     top: 120px;
     height: 40vh;;
 }
-/*
-.slide {
+*/
+.slides {
     width: 40vw;
     position: relative;
     top: 120px;
     height: 40vh;;
 }
-*/
+
 #prevIcon{
     color: rgb(0, 141, 185);
     font-family: 'Poppins', sans-serif;

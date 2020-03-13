@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container} from 'react-bootstrap';
+import {Container, Navbar} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import './Home.styles.css'
 import { SlideShow } from '../../components/slide-show/slide-show.component';
@@ -8,18 +8,21 @@ import { SlideShow } from '../../components/slide-show/slide-show.component';
 
 export const Home = () => (
     <div className="home">
-    <h1 className="title">
-    <span className="home_open_tag">&#60; </span>
-    <span className="home_slash"> /</span>
-    <span className="home_close_tag">&#62;</span>
-    <span className="home_title">CODE ONE</span>
-    </h1>
+    <Navbar className="navbar">
+    <Navbar.Brand className="logo" href="/">
+    <span className="logo_open_tag">&#60; </span>
+    <span className="logo_slash"> /</span>
+    <span className="logo_close_tag">&#62;</span>
+
+
+    </Navbar.Brand>
+    </Navbar>
 
     <Container>
     <div className="home-panel"/>
     <div className="left">
-    <div className="subtitle">Code One is the perfect playground environment for front end developers.
-    Learn, build, and test with your own live output browser that updates instantly alongside your code!</div>
+    <h1 className="home_title">CODE ONE</h1>
+    <div className="subtitle">Design, build, and test your front end projects in our online playground. Develop with HTML, CSS, and JS and watch your projects come to life alongside your code!</div>
     <div className="sign-in">
     <button className="home-button"><span>Sign In</span></button>
     <button className="home-button"><span>Create Account</span></button>
