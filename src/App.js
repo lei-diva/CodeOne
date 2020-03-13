@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import Home from './pages/Home/Home';
 import Playground from './pages/Playground/Playground';
-import {Home} from './pages/Home/Home';
+
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component {

@@ -1,0 +1,58 @@
+.sign-in {
+    float: right;
+    position: relative;
+    width: 35vw;
+    top: 5vh;
+    right:2vw;
+    height: 80vh;
+    background-color: rgb(255,255,255,30%);
+    z-index: 10;
+    border-radius: 5%;
+}
+
+.sign-in-title {
+    font-size: 30px;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(94, 163, 224);
+    position: relative;
+    top: 80px;
+    left: 85px;
+}
+
+.home-button.sign-in-button{
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    top: 150px;
+    left: 50px;
+    border-radius: 30px;
+    background-color: white;
+    color: rgba(94, 163, 224);
+    border: 1px solid rgba(94, 163, 224);
+    background-color:white;
+    color: #5ea3e0;
+
+
+}
+
+.home-button.sign-in-button:hover{
+    background-color:#5ea3e0;
+    color: white;
+    border: 1px solid white;
+}
+
+.email-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 28vh;
+    left: 40px;
+}
+
+.pwd-icon {
+    width: 45px;
+    height: 40px;
+    position: absolute;
+    left: 37px;
+    top: 38vh;
+}
