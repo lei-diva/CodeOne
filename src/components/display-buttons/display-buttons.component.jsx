@@ -7,7 +7,7 @@ export const DisplayButtons = (props) =>
     {props.panels.map((panel, id) => (
 
             <button
-                className={`${props.display[id]} display-button`}
+                className={`${panel} ${props.display[id]} display-button`}
                 key={id}
                 onClick={(e) => {props.change(id, e)}}>
             {panel.toUpperCase()}

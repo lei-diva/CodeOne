@@ -1,38 +1,64 @@
 .display-button.hide {
-    color: #343434;
     transform:scale(0.95);
-    /*color: #343434;*/
-    /*opacity: 50%;*/
     display: inline-block !important;
     border: none;
-
-
+    color: white;
+    opacity: 50%;
 
 }
 .display-button.show {
-    /*border: 1px solid white;*/
-    color:#ffffff;
-    border-radius: 30px !important;
+
+    color: white;
+    border-radius: 5px !important;
+    font-weight:400;
 }
 
-
+/*
 .display-button:hover {
-    border-radius: 30px !important;
+    border-radius: 5px !important;
     transform: scale(1.03);
+    color: #5c97b0;
+
+}*/
+.display-button.show:hover {
+    border-radius: 5px !important;
+    transform: scale(1.03);
+    opacity: 50%;
+}
+.show:focus {
+    border-radius: 5px !important;
+    transform: scale(1.03);
+    color: white;
+    opacity: 100%;
 
 }
+
+.hide:focus {
+    border-radius: 5px !important;
+    transform: scale(1.03);
+    opacity: 50%;
+}
+
+.display-button.hide:hover {
+    border-radius: 5px !important;
+    transform: scale(1.03);
+    color: white;
+    opacity: 100%;
+
+}
+
 .display-button {
     font-size: 20px !important;
     border-radius: 0px;
-    height: 40px;
-    width: 150px;
-    background-color: Transparent;
+    height: 30px;
+    width: 100px;
     outline: none !important;
     border: none;
     cursor:pointer;
     /*font-family: 'Abel', sans-serif;*/
     margin-right: 50px !important;
     font-weight: 300 !important;
+    background-color: transparent;
 
 }
 

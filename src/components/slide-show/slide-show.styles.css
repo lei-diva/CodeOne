@@ -1,14 +1,16 @@
 .carousel {
     width: 40vw !important;
-    height: 78vh !important;
+    height: 80vh !important;
     overflow:hidden;
     float: right;
     top: 12vh;
     left: 42px;
     position: relative;
     border-radius: 0px 10px 10px 0px;
-    background-color: rgb(26, 26, 26);
+    background: rgba(82, 90, 150, 0.1);
 }
+
+
 
 .item {
     height: 60vh;
@@ -17,14 +19,22 @@
 }
 
 video {
+    display: none;
     width: 40vw;
     position: relative;
     top: 120px;
     height: 40vh;;
 }
-
+/*
+.slide {
+    width: 40vw;
+    position: relative;
+    top: 120px;
+    height: 40vh;;
+}
+*/
 #prevIcon{
-    color: rgb(223, 114, 245);
+    color: rgb(0, 141, 185);
     font-family: 'Poppins', sans-serif;
     font-size: 45px;
     font-weight: 400;
@@ -34,7 +44,7 @@ video {
 }
 
 #nextIcon{
-    color: rgb(223, 114, 245);
+    color: rgb(0, 141, 185);
     font-family: 'Poppins', sans-serif;
     font-size: 45px;
     font-weight: 400;

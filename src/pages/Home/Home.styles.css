@@ -1,7 +1,9 @@
 .home {
     width: 100%;
     height: 100vh;
-    background:linear-gradient(to left,#f498e1, #9975ed);
+    /*background: linear-gradient(#000000, #2c1378 90%);*/
+    /*background: linear-gradient(#181818, #7f58cd 170%);*/
+
 }
 
 .home_open_tag {
@@ -10,7 +12,7 @@
     font-size: 60px;
     position: relative;
     bottom: 6px;
-    color: white;
+    color: rgb(83, 163, 232);
     float: left;
 }
 
@@ -21,7 +23,7 @@
     position: relative;
     left: 2px;
     float: left;
-    color: white;
+    color: rgb(83, 163, 232);
 }
 
 .home_close_tag{
@@ -31,7 +33,7 @@
     position: relative;
     bottom: 6px;
     left: 6px;
-    color: white;
+    color: rgb(83, 163, 232);
 }
 
 .home_title {
@@ -53,79 +55,102 @@
 
 .sign-in {
     position: absolute;
-    top: 350px;
-    left: 230px;
+    z-index: 10;
+    top: 270px;
+    left: 80px;
+
 }
 
 .home-panel{
     position: absolute;
     top: 12vh;
-    height: 78vh;
+    height: 80vh;
     width: 80vw;
     background-color:white;
-    border-radius: 10px;
-    opacity: 30%;
+    border-radius: 5px;
+    opacity: 25%;
+    -moz-opacity: 0.5; /* Firefox and Mozilla browsers */
+   -webkit-opacity: 0.5;
     border: 10px solid white;
 }
 
 .subtitle {
-    color: #1A1919;
+    color: rgb(84, 79, 79);
     position: absolute;
-    z-index: 5;
     font-size: 30px;
-    top: 120px;
-    left: 210px;
+    top: 30px;
+    left: 50px;
     font-weight: 200;
     width: 500px;
+
 }
 
 .slideshow {
     float: right;
-    background-color: #1A1919;
     width: 40vw;
     height: 80vh;
-    top: 72px;
     left: 42px;
     position: relative;
     border-radius: 0px 20px 20px 0px;
 }
 
+
+
+
 .home-button {
     display: block;
-
+    font-weight: 200;
+    font-size: 20px;
     width: 300px;
     height: 50px;
     margin: 30px 60px;
     color: white;
-    background-color:#af8dff;
-
+    background-color: rgb(83, 163, 232, 85%);
+    /*background-color:#af8dff;*/
     border-radius: 5px;
     border: none;
 }
 
 
 .home-button:hover {
-    background:linear-gradient(to left,#af8dff,#a679ff, #af8dff);
+    background-color: rgb(83, 163, 232);
+
+    /*background:linear-gradient(to left,#af8dff,#a679ff, #af8dff);*/
 }
 
 
 .guest-button{
-    background-color: transparent;
+    background-color: rgb(255,255,255, 90%);
     border: none;
     display: block;
     width: 300px;
     height: 50px;
     margin: 30px 60px;
-    color: #1A1919;
+    border-radius: 5px;
+
+}
+
+.guest-button:hover{
+    background-color: rgb(255,255,255);
+    border: none;
+    display: block;
+    width: 300px;
+    height: 50px;
+    margin: 30px 60px;
+    border-radius: 5px;
+
 }
 
 .guest-button a {
-    color:white;
+    color:rgb(83, 163, 232);
+    font-size: 18px;
+    font-weight: 300;
 }
+
+
 
 .home-button:focus {
     outline: none;
-    transform: scale(1.05);
 }
 
 .home-button:focus:after {
@@ -133,9 +158,34 @@
     transform: scale(1.00);
 }
 
+.guest-button a:hover{
+    outline:none;
+    background-color:(rgb(255,255,255,70%));
+    text-decoration: none !important;
+}
+
 .guest-button:hover{
     outline:none;
+    background-color:(rgb(255,255,255,70%));
+    text-decoration: none !important;
 }
+
 .guest-button:focus{
     outline:none;
+}
+
+
+.left {
+    position: absolute;
+    width: 40vw;
+    height: 80vh;
+    top: 12vh;
+    background-color: transparent;
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+.left:hover {
+    background-color:rgb(255,255,255,20%);
+
 }

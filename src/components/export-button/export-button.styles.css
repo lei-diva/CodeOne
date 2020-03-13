@@ -4,10 +4,13 @@
     position: relative;
     bottom: 2px;
     text-align: center !important;
+    position: relative;
+    z-index: 5;
 }
 
 .export-button:hover {
-    transform: none !important;
+    transform: scale(1.10);
+
 }
 
 .export-button {
