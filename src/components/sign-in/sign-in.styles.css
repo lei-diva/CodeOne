@@ -1,7 +1,7 @@
 .sign-in {
     float: right;
     position: relative;
-    width: 35vw;
+    width: 35vw !important;
     top: 5vh;
     right:2vw;
     height: 80vh;
@@ -23,14 +23,16 @@
 .home-button.sign-in-button{
     font-family: 'Raleway', sans-serif;
     position: relative;
-    top: 150px;
-    left: 50px;
+    top: 130px;
+    left: 70px;
+    margin-top: 30px;
     border-radius: 30px;
     background-color: white;
     color: rgba(94, 163, 224);
     border: 1px solid rgba(94, 163, 224);
     background-color:white;
     color: #5ea3e0;
+    width: 270px;
 
 
 }
@@ -41,18 +43,10 @@
     border: 1px solid white;
 }
 
-.email-icon {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 28vh;
-    left: 40px;
-}
-
 .pwd-icon {
     width: 45px;
     height: 40px;
     position: absolute;
     left: 37px;
-    top: 38vh;
+    top: 37vh;
 }

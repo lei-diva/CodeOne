@@ -1,0 +1,54 @@
+.project-container {
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(250, 250, 250, 0.205);
+    border: 1px solid rgb(63, 63, 63);
+    border-radius: 5px;
+    padding: 30px;
+    cursor: pointer;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+    width: 175px;
+    height: 225px;
+    margin-right: -50px;
+
+  }
+
+  .project-container:hover {
+    transform: scale(1.03);
+    opacity: 100%;
+    border: 2px solid white;
+  }
+
+  #preview{
+    width: 120px !important;
+    height: 120px;
+    background:white;
+    border:none;
+    border-radius: 5px;
+    position: relative;
+    left: -3px;
+
+
+  }
+
+  .project-title{
+    font-size: 16px;
+    font-weight: 300;
+    margin: auto;
+    margin-top: -20px;
+    margin-bottom: 10px;
+
+  }
+
+  .date-time {
+    font-size: 14px;
+    color: #212121;
+    position: relative;
+    top: 5px;
+    margin:auto;
+    margin-bottom: 5px;
+    font-weight: 200;
+    }

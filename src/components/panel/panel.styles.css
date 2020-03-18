@@ -12,59 +12,50 @@
     background-color: rgba(255, 255, 255, 0.701) !important;
     font-weight: 500 !important;
     flex-grow: 1;
-    height: 92.5vh !important;
+    height: 89.5vh !important;
     font-family: 'PT Sans', sans-serif;
     font-size: 16px !important;
     color:  #212121 !important;
+    border-radius: 0px !important;
 }
 
 .codearea:focus {
     outline: none !important;
     background-color: rgba(255, 255, 255, 0.9) !important;
-    border: 4px solid  rgb(83, 163, 232, 70%) !important;
+    border: 3px solid  rgb(171, 210, 252) !important;
 
 }
 
 .codearea:hover {
-    border: 4px solid rgb(167, 210, 255);
+    border: 3px solid rgb(171, 210, 252);
 }
 
-
-/*
-.codearea.Html:hover {
-    border: 3px solid white;
+textarea{
+    resize: none !important;
 }
 
+.code-label {
+    height: 25px !important;
+    font-size: 15px !important;
+    text-align: center;
+    padding-top: 0px !important;
+    background-color: rgb(171, 210, 252) !important;
+    border: 1px solid rgb(171, 210, 252) !important;
+    position: relative;
+    outline: none !important;
 
-.codearea.Html:focus {
-    border: 3px solid white;
-}
-
-.codearea.Css {
-    border: 2px solid rgb(19, 66, 136, 50%);
-}
-
-.codearea.Css:hover {
-    border: 3px solid rgb(19, 66, 136);
-}
-.codearea.Css:focus{
-    border: 3px solid rgb(19, 66, 136);
 
 }
 
-.codearea.Js{
-    border: 3px solid rgb(41, 41, 41, 50%);
-
+.code-label:focus {
+    outline: none !important;
+    border: none !important;
+    border: 1px solid #212121 !important;
+    box-shadow: none !important;
 }
 
-.codearea.Js:hover{
-    border: 3px solid rgb(92, 92, 92);
+.code-label:hover {
+    outline: none !important;
+    border: 1px solid rgb(33, 33, 33, 30%) !important;
+    box-shadow: none !important;
 }
-.codearea.Js:focus{
-    border: 3px solid rgb(92, 92, 92);
-}
-*/
-
-
-
-

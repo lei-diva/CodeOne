@@ -14,12 +14,15 @@
 }
 
 .export-button {
-    position: relative;
-    left: 600px;
+    position: absolute;
+    bottom: 94vh;
     width: 35px;
     height: 35px;
     border-radius: 50% !important;
-    border: 1px solid white;
+    border: 1px solid white !important;
+    float: right;
+    left: 85vw;
+    background-color:transparent;
 }
 
 

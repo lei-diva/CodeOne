@@ -1,9 +1,5 @@
 .navbar {
-
-   /* background: linear-gradient(to left,#ddd6f3, #faaca8);*/
-    /*background: linear-gradient(to right, #9796f0, #fbc7d4);*/
-    /*background-color: rgb(220, 215, 215);*/
-    /*background-color: rgb(145, 191, 232, 70%); light blue */
+    position: fixed;
     background-color: rgb(83, 163, 232);
     height: 50px;
 
@@ -14,6 +10,10 @@
     right: 6px;
 
 
+}
+
+.logo:hover{
+    transform: scale(1.05);
 }
 
 .logo_open_tag {
@@ -27,14 +27,26 @@
 
 .project_title {
     position: absolute;
-    left: 60px;
-    color: #343434;
-    font-size: 22px;
-    font-weight: 300;
-    padding: 3px 8px;
+    color: white !important;
+    font-size: 20px !important;
     border: 1px solid transparent !important;
     border-radius: 5px;
+    background-color: transparent !important;
+    width: 160px !important;
+    font-weight: 300 !important;
+    height: 37px !important;
+    padding: 8px !important;
+    left: 60px;
 }
+
+
+.project_title::placeholder {
+    color: rgb(46, 46, 46) !important;
+    font-size: 20px !important;
+    font-weight: 300 !important;
+
+}
+
 
 .project_title:hover {
     border: 1px solid rgb(255, 255, 255, 20%) !important;
@@ -43,6 +55,7 @@
 }
 
 .project_title:focus {
+    box-shadow: none !important;
     outline: none !important;
     border: 1px solid rgb(255, 255, 255, 20%) !important;
 

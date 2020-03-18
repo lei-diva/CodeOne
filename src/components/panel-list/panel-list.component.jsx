@@ -1,25 +1,56 @@
 import React, { Component } from 'react';
 import { Panel } from '../panel/panel.component';
 import './panel-list.styles.css'
-import { Row, Col} from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
+import ExportButton from '../export-button/export-button.component';
+import SaveIcon from '../../save.png';
+import ProfileIcon from '../../profile.png';
+import {withRouter} from 'react-router-dom';
+
 
 class PanelList extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.state = {
-            Html : '',
-            Css: '',
-            Js: '',
-            /*autocomplete: false,
-            autostring: ''*/
+            Html : this.props.content.Html,
+            Css: this.props.content.Css,
+            Js: this.props.content.Js,
+            file_names: ['index.html', 'styles.css', 'script.js']
         }
 
     }
 
     componentDidMount () {
-            document.getElementById("out").contentWindow.document.write('<html><head><style type="text/css"></style></head></body></body></html');
+            document.getElementById("out").contentWindow.document.write('<html><head><style type="text/css"></style></head><body></body></html');
+            this.outputUpdate();
     }
+
+
+  updateProject = () => {
+    console.log(this.props.userRef);
+    console.log(this.props.projectname)
+
+    if (!this.props.projectname){
+        alert("Missing project title");
+        return;
+    }
+    this.props.userRef.collection('projects').doc(this.props.projectname).set({
+      Html: this.state.Html,
+      Css: this.state.Css,
+      Js: this.state.Js,
+      date: new Date()
+    })
+    .then( () => {
+      alert("Saved");
+      console.log("Success")
+    })
+    .catch( (error)=> {
+      console.log(error);
+    });
+
+  }
+
 
     outputUpdate = () => {
 
@@ -37,45 +68,39 @@ class PanelList extends Component{
     }
 
     typeUpdate = (letter, panel, e) =>{
-        console.log("typeupdate");
         const Lang = panel
         this.setState({[Lang]: letter}, this.outputUpdate);
 
-        /*
-        if (letter === '<') {
-            console.log("here");
-            this.setState({autostring : '</', autocomplete: true});
-            console.log("after");
-        }else if(letter === '>'){
-            let temp = this.setState.autostring;
-            temp = temp + letter;
-            this.setState({autostring: temp});
-            this.setState({autocomplete: false});
-            console.log(this.state.autostring);
-        } else if (this.state.autocomplete) {
-            let temp = this.setState.autostring;
-            temp = temp + letter;
-
-            this.setState({autostring: temp});
-
-        } else {
-            console.log('nothing');
-        }*/
     }
 
+    fileUpdate= (letter, id, e) => {
+        console.log(e.target.value);
+        let new_file_names = this.state.file_names;
+        new_file_names[id] = letter;
+        console.log(new_file_names);
+        this.setState({file_names: new_file_names});
+}
+
     render (){
+
+
       return(
+          <div className="playground">
         <div className="panel_out">
+
             <Row noGutters="true" className="panels">
 
         {this.props.panels.map((panel, id) =>{
             return (
-
                     <Panel
                         display={this.props.display[id]}
                         name={panel}
                         key={id}
+                        id={id}
                         handleChange={this.typeUpdate}
+                        file={this.state.file_names[id]}
+                        fileChange={this.fileUpdate}
+                        content={this.state[panel]}
                     >
                     </Panel>
 
@@ -87,10 +112,30 @@ class PanelList extends Component{
             </Col>
             </Row>
         </div>
+        <ExportButton className="export_button"
+        file_names={this.state.file_names}
+        html={this.state.Html}
+        css={this.state.Css}
+        js={this.state.Js}/>
+         {
+        this.props.currentUser?(
+        <div>
+        <button className="save_button" onClick={this.updateProject}>
+            <img className="save_icon" src={SaveIcon}/>
+        </button>
+        <button className="save_button user_button" onClick={()=> this.props.history.push('/profile')}>
+        <img className="save_icon" src={ProfileIcon}/>
+    </button>
+    </div>
+        )
+        :
+        null
+         }
+        </div>
 
       );
     }
 }
 
-export default PanelList;
+export default withRouter(PanelList);
 

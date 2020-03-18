@@ -10,8 +10,17 @@ $main-color: black;
 .group {
   position: relative;
   top: 120px;
-  left: 5vw;
+  left: 6vw;
   margin: 25px;
+
+  .sign-in-icon {
+    width: 40px;
+    height: 40px;
+    z-index: 20;
+    position: absolute;
+    left: -60px;
+    top: 4px;
+  }
 
   .form-input {
     background: none;
@@ -20,12 +29,13 @@ $main-color: black;
     font-size: 18px;
     padding: 10px;
     display: block;
-    width: 25vw;
+    width: 23vw;
     border: none;
     border-radius: 5px;
     border-bottom: 1px solid $sub-color;
     margin: 10px 0px;
     font-family: 'Raleway', sans-serif;
+
 
     &:focus {
       outline: none;
@@ -56,3 +66,5 @@ $main-color: black;
     }
   }
 }
+
+

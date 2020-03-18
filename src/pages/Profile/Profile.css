@@ -1,0 +1,107 @@
+.home-button.new-project-button{
+    float: right !important;
+
+}
+
+.profilepage{
+    height: 100vh;
+    position: relative;
+    overflow:hidden;
+    background: linear-gradient(
+        to top,
+        rgb(83, 163, 232) 0%,
+        rgb(228, 248, 248) 100%
+      );
+
+}
+.profile-projects{
+    background-color: rgba(192, 191, 192, 0.25);
+    font-weight: 200;
+    font-size: 30px;
+    width: 80vw;
+    text-align: center;
+    margin:auto;
+    position: relative;
+    top: 240px;
+    padding-top: 0;
+    border-radius: 10px;
+    height: 370px;
+}
+
+.profile-projects:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.no-project-text{
+    position: relative;
+    margin:auto;
+    bottom:50px;
+    left: 130px;
+}
+
+.display-name{
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 200px !important;
+    width: 100%;
+    position: relative;
+    font-weight: 200;
+    font-size: 30px;
+    float: left;
+    color:rgb(63, 63, 63);
+}
+.user-character {
+    position: relative;
+    float: left;
+    border: 3px solid rgb(63, 63, 63);
+    border-radius: 80px;
+    bottom: 40px;
+    margin-right: 50px;
+    margin-left: 130px;
+}
+
+.new-project-button{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    border:2px solid rgb(83, 163, 232);
+    color: rgb(83, 163, 232);
+    float: right;
+    position: relative;
+    font-size: 70px;
+    font-weight: 200;
+    bottom: 45px;
+    right: 160px;
+    z-index: 40;
+}
+
+#plus {
+    position: relative;
+    bottom: 22px;
+
+}
+
+.new-project-button:hover , .new-project-button:hover {
+    color: white;
+    background-color: rgb(83, 163, 232);
+    border:2px solid rgb(83, 163, 232);
+    outline: none;
+    box-shadow: none;
+}
+
+.search-nav {
+    background-color: rgba(255, 255, 255, 0.493);
+    width: 80vw;
+    position: relative;
+    left: -20px;
+    height: 50px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#search-nav-title {
+    float: left;
+    position: relative;
+    bottom: 230px;
+    left: 30px;
+}
+

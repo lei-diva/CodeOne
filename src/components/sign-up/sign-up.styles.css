@@ -1,0 +1,36 @@
+.sign-up-title {
+  font-size: 30px;
+  font-weight: 300;
+  font-family: 'Raleway', sans-serif;
+  color: rgba(94, 163, 224);
+  position: relative;
+  top: 60px;
+  left: 30px;
+}
+.sign-up-form{
+  position: relative;
+  top: -40px;
+}
+
+.home-button.sign-up-button{
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  top: 150px;
+  left: 70px;
+  margin-top: 30px;
+  border-radius: 30px;
+  background-color: white;
+  color: rgba(94, 163, 224);
+  border: 1px solid rgba(94, 163, 224);
+  background-color:white;
+  color: #5ea3e0;
+  width: 270px;
+
+}
+
+
+.home-button.sign-up-button:hover{
+  background-color:#5ea3e0;
+  color: white;
+  border: 1px solid white;
+}

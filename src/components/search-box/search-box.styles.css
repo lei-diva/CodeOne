@@ -1,0 +1,21 @@
+.search {
+  -webkit-appearance: none;
+  border:2px solid rgb(83, 163, 232);
+  outline: none;
+  padding: 10px;
+  width: 150px;
+  width: 400px;
+  position: relative;
+  border-radius: 5px;
+  opacity: 60%;
+  height: 38px;
+  font-size: 13px;
+  float: right;
+  bottom: 226px;
+  right: 20px
+}
+
+
+.search:hover , .search:focus{
+  opacity: 100%;
+}

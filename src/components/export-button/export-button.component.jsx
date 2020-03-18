@@ -15,11 +15,11 @@ class ExportButton extends Component{
     return (
     <div>
     <button
-      className="export-button display-button"
+      className="export-button"
      onClick={(e) => {
-       this.download('index.html', '<p>Hello world!</p>');
-       this.download('styles.css', 'p {color: red};');
-       this.download('script.js', 'alert("hi")');
+       this.download(this.props.file_names[0], this.props.html);
+       this.download(this.props.file_names[1], this.props.css);
+       this.download(this.props.file_names[2], this.props.js);
        }}>
     <img className="export-icon" alt="export" src={Down}></img>
 
