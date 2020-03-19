@@ -2,7 +2,7 @@
     position: relative;
     background-color: rgb(83, 163, 232);
     height: 50px;
-
+    width: 100vw;
 }
 
 .logo {
