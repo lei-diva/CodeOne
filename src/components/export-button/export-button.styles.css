@@ -26,3 +26,10 @@
 }
 
 
+
+.export-button:focus {
+    transform: scale(1.10);
+    border: none;
+    outline: none;
+    box-shadow: none;
+}

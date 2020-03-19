@@ -11,11 +11,13 @@ export const Project = (props) => {
     var ds = d.toLocaleString();
     console.log(ds);
     return (
-    <div className="project-container" onClick={()=>{props.selectProject(props.project.content, props.project.name)}}>
+    <div className="project-container" onClick={(e)=>{props.selectProject(props.project.content, props.project.name)}}>
+
         <p className="project-title">{props.project.name}</p>
         <iframe id="preview" srcDoc={src}></iframe>
 
         <p className="date-time">{ds}</p>
+
 
     </div>
 );

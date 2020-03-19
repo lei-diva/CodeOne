@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Panel } from '../panel/panel.component';
 import './panel-list.styles.css'
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Alert } from 'react-bootstrap';
 import ExportButton from '../export-button/export-button.component';
 import SaveIcon from '../../save.png';
 import ProfileIcon from '../../profile.png';
@@ -41,10 +41,8 @@ class PanelList extends Component{
       Js: this.state.Js,
       date: new Date()
     })
-    .then( () => {
-      alert("Saved");
-      console.log("Success")
-    })
+    .then(<Alert key="1" variant="success">Saved</Alert>
+  )
     .catch( (error)=> {
       console.log(error);
     });

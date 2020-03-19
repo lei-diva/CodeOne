@@ -6,7 +6,8 @@ import {SearchBox} from '../../components/search-box/search-box.component';
 import Playground from '../Playground/Playground';
 import {withRouter} from 'react-router-dom';
 import {Jumbotron, Container} from 'react-bootstrap';
-import Plus from '../../plus.png'
+import Boy from '../../boy.png'
+
 
 
 class ProfilePage extends React.Component{
@@ -56,6 +57,20 @@ class ProfilePage extends React.Component{
           })
         }
 
+    deleteProject = (project_name) => {
+        if (this.props.userRef){
+        this.props.userRef.collection("projects").doc(project_name).delete()
+        .then(()=> {
+            let newprojects = this.state.projects;
+            newprojects = newprojects.filter((project)=>(project.name != project_name));
+            this.setState({projects: newprojects});
+            console.log("Document successfully deleted!");
+        }).catch(function(error) {
+            console.error("Error removing document: ", error);
+        });
+    }
+}
+
     handleSearch = (e) => {
         this.setState({searchField: e.target.value});
     }
@@ -83,7 +98,10 @@ class ProfilePage extends React.Component{
             <HomeNav homepath='/profile'/>
 
             <Jumbotron className="display-name">
+            <img className="user-character" alt="usericon" src={Boy}></img>
+                {/*}
             <img className="user-character" alt="usericon" src={`https://robohash.org/${id}?set=set2&size=150x150`}></img>
+        {*/}
             <h3>Hi, {display}! </h3>
             Update your projects or create a new one!
             <button className=" new-project-button" onClick={()=> this.props.history.push('/playground')}><span id="plus">+</span></button>
@@ -105,7 +123,7 @@ class ProfilePage extends React.Component{
             (
                 <div>
 
-                <ProjectList selectProject={this.selectProject} projects={filteredProjects}/>
+                <ProjectList deleteProject={this.deleteProject} selectProject={this.selectProject} projects={filteredProjects}/>
                 </div>
             )
             }

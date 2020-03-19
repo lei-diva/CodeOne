@@ -6,7 +6,7 @@
 .profilepage{
     height: 100vh;
     position: relative;
-    overflow:hidden;
+
     background: linear-gradient(
         to top,
         rgb(83, 163, 232) 0%,
@@ -52,11 +52,17 @@
 .user-character {
     position: relative;
     float: left;
-    border: 3px solid rgb(63, 63, 63);
+    border: 2px solid rgb(116, 115, 115);
     border-radius: 80px;
     bottom: 40px;
     margin-right: 50px;
     margin-left: 130px;
+    width: 150px;
+    height: 150px;
+}
+
+.user-circle{
+
 }
 
 .new-project-button{

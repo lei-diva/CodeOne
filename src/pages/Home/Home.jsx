@@ -8,6 +8,7 @@ import SignUp from '../../components/sign-up/sign-up.component';
 import { HomeNav } from '../../components/home-nav-bar/home-nav-bar.component';
 
 
+
 class Home extends React.Component{
     constructor () {
         super();

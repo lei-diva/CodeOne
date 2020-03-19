@@ -54,8 +54,8 @@
 .save_button:focus {
     outline: none;
     box-shadow: none;
-    border: none;
-
+    border:none;
+    transform: scale(1);
 }
 
 
