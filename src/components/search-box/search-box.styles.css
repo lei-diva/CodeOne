@@ -5,14 +5,15 @@
   padding: 10px;
   width: 150px;
   width: 400px;
-  position: relative;
+  position: absolute;
   border-radius: 5px;
   opacity: 60%;
   height: 38px;
   font-size: 13px;
   float: right;
-  bottom: 226px;
-  right: 20px
+  right: 20px;
+  z-index:50;
+  top: 5px;
 }
 
 

@@ -5,16 +5,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 0px 10px;
-    bottom: 230px;
     left: 5px;
-
+    bottom: 70px;
   }
 
   .delete-button {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 1.5px solid white;
     padding: 0;
     background-color: rgb(83, 163, 232);
     color: white;

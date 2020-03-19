@@ -99,20 +99,19 @@ class ProfilePage extends React.Component{
 
             <Jumbotron className="display-name">
             <img className="user-character" alt="usericon" src={Boy}></img>
-                {/*}
-            <img className="user-character" alt="usericon" src={`https://robohash.org/${id}?set=set2&size=150x150`}></img>
-        {*/}
-            <h3>Hi, {display}! </h3>
+            <div className="profile-title">
+            <h2>{display}</h2>
             Update your projects or create a new one!
+            </div>
             <button className=" new-project-button" onClick={()=> this.props.history.push('/playground')}><span id="plus">+</span></button>
             </Jumbotron>
-
-            <Jumbotron fluid className="profile-projects">
-                        <Container>
             <div className="search-nav">
                <span id="search-nav-title">Projects</span>
             <SearchBox id="search-box-nav" handleChange={this.handleSearch}/>
              </div>
+            <Jumbotron fluid className="profile-projects">
+                        <Container>
+
             {
                 projects.length == 0?(
 

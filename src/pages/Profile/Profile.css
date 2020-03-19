@@ -4,16 +4,18 @@
 }
 
 .profilepage{
-    height: 100vh;
+    height: 150vh;
     position: relative;
-
     background: linear-gradient(
         to top,
         rgb(83, 163, 232) 0%,
         rgb(228, 248, 248) 100%
       );
+      overflow: hidden;
 
 }
+
+
 .profile-projects{
     background-color: rgba(192, 191, 192, 0.25);
     font-weight: 200;
@@ -22,10 +24,11 @@
     text-align: center;
     margin:auto;
     position: relative;
-    top: 240px;
-    padding-top: 0;
-    border-radius: 10px;
-    height: 370px;
+    border-radius: 0 0 10px 10px;
+    height: 580px;/*370*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 48px;
 }
 
 .profile-projects:hover {
@@ -35,8 +38,8 @@
 .no-project-text{
     position: relative;
     margin:auto;
-    bottom:50px;
-    left: 130px;
+    top: 50px;
+
 }
 
 .display-name{
@@ -52,7 +55,7 @@
 .user-character {
     position: relative;
     float: left;
-    border: 2px solid rgb(116, 115, 115);
+    border: 2px solid rgb(58, 58, 58);
     border-radius: 80px;
     bottom: 40px;
     margin-right: 50px;
@@ -61,9 +64,6 @@
     height: 150px;
 }
 
-.user-circle{
-
-}
 
 .new-project-button{
     width: 80px;
@@ -76,7 +76,7 @@
     position: relative;
     font-size: 70px;
     font-weight: 200;
-    bottom: 45px;
+    bottom: 95px;
     right: 160px;
     z-index: 40;
 }
@@ -96,18 +96,33 @@
 }
 
 .search-nav {
-    background-color: rgba(255, 255, 255, 0.493);
+    background-color: rgba(255, 255, 255, 0.534);
     width: 80vw;
-    position: relative;
-    left: -20px;
+    position: absolute;
+    top: 280px;
+    margin: auto;
+    left: 10vw;
     height: 50px;
     border-radius: 10px 10px 0px 0px;
+    z-index: 40;
 }
 
 #search-nav-title {
     float: left;
     position: relative;
-    bottom: 230px;
+    font-size: 30px;
     left: 30px;
+    top: 2px;
+    font-weight: 200;
 }
 
+.profile-title {
+    position: relative;
+    top: -10px;
+
+}
+
+h2{
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
