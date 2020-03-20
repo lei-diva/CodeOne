@@ -9,7 +9,7 @@ import prevIcon from '../../back.png';
 import './slide-show.styles.css';
 
 export const SlideShow = () => (
-<Carousel interval="6000" className="carousel" prevIcon={<span id="prevIcon">&#60;</span>} nextIcon={<span id="nextIcon">&#62;</span>}>
+<Carousel interval="2000" className="carousel" prevIcon={<span id="prevIcon">&#60;</span>} nextIcon={<span id="nextIcon">&#62;</span>}>
   <Carousel.Item className="item">
             <img className="slides" src={first}></img>
           <Carousel.Caption>
