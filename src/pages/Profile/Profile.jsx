@@ -4,7 +4,7 @@ import { HomeNav } from '../../components/home-nav-bar/home-nav-bar.component';
 import {ProjectList} from '../../components/project-list/project-list.component';
 import {SearchBox} from '../../components/search-box/search-box.component';
 import Playground from '../Playground/Playground';
-import {withRouter} from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 import {Jumbotron, Container} from 'react-bootstrap';
 import Boy from '../../boy.png'
 
@@ -96,7 +96,10 @@ class ProfilePage extends React.Component{
 
         <div className="profilepage">
             <HomeNav className="home-nav"/>
-
+            <div className="sign-in-nav-link">
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/playground">Playground</Link></li>
+            </div>
             <Jumbotron className="display-name">
             <img className="user-character" alt="usericon" src={Boy}></img>
             <div className="profile-title">

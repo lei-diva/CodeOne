@@ -33,7 +33,7 @@ class Home extends React.Component{
             <div className="home">
 
 
-                <HomeNav className="home-nav" homepath='/'/>
+                <HomeNav className="home-nav"/>
                 <div className="nav-link">
                <Scrollspy items={ ['home', 'features', 'about'] } currentClassName="is-current">
                     <li><a href="#home">Home</a></li>
@@ -75,7 +75,7 @@ class Home extends React.Component{
                     (
                         <div className="signin">
                         <button className="home-button" onClick={() => {this.updateHomeDisplay(SignIn)}}><span>Sign In</span></button>
-                        <button className="home-button" onClick={() => {this.updateHomeDisplay(SignUp)}}><span>Create Account</span></button>
+                        <button className="home-button" onClick={() => {this.updateHomeDisplay(SignUp)}}><span>Create an Account</span></button>
                         <button className="guest-button" onClick={() => {this.props.history.push('playground')}} >Continue as Guest</button>
                         </div>
                     )
@@ -99,14 +99,16 @@ class Home extends React.Component{
             <Row className="about">
                 <section id="about"></section>
                 <img className="face" src={Face}/>
+
                 <div className="about-text">
                 <span className="about_title">About</span>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <p> I created Code One to offer functionality to other web developers like myself. This
+                        web application was intended to optimize and simplify front end development by providing
+                        immediate visual feedback along with other useful tools. Code One was created over the course
+                        of two weeks and is my first React Native project.
                     </p>
+                    <div className="diva">Diva Lei</div>
+                    <a href="mailTo:divaaleii@gmail.com" class="contact-button">Contact Me</a>
                 </div>
 
 
@@ -132,6 +134,12 @@ class Home extends React.Component{
                     <ul>
                 <span className="footer-title">Build</span>
                     <li><Link classname="footer-link" to="/playground">Playground</Link></li>
+                    </ul>
+
+                    <ul>
+                <span className="footer-title">User</span>
+                    <li><Link classname="footer-link" to="/login">Sign In</Link></li>
+                    <li><Link classname="footer-link" to="/sign-up">Create an Account</Link></li>
                     </ul>
                     <a href="https://github.com/lei-diva/CodeOne"><img className="footer-icon" src={Github}/></a>
 

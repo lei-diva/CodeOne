@@ -168,7 +168,7 @@
 
 .about {
     width: 100vw !important;
-    height: 80vh;
+    height: 85vh;
     position: relative;
     background-color: rgba(255, 255, 255, 0.493);
     left: 15px;
@@ -197,9 +197,9 @@
 .face {
     position: relative;
     float: left;
-    border: 2px solid rgb(58, 58, 58);
+    border: 4px solid rgb(91, 161, 223);
     border-radius: 50%;
-    margin-top: 140px;
+    margin-top: 120px;
     margin-left: 100px;
     width: 250px;
     height: 250px;
@@ -230,7 +230,7 @@
     position: relative;
     left: 165px;
     top: 40px;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 
@@ -241,7 +241,7 @@
     color:white;
     left: 136px;
     top: 40px;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .footer_close_tag {
@@ -250,7 +250,7 @@
     color: white;
     position: relative;
     top: 40px;
-    font-weight: 200;
+    font-weight: 300;
     left: 135px;
 }
 
@@ -261,6 +261,7 @@ ul{
     left: 19vw;
     top: 50px;
     height: 120px;
+    margin: 0px 50px 0px 0px;
 }
 
 .footer li a{
@@ -295,7 +296,7 @@ ul{
     background-color: red;
     height: 5px;
     width: 60vw;
-    top: -50px;
+    top: -53px;
     left: -250px;
     position: absolute;
     z-index: 60;
@@ -306,7 +307,7 @@ ul{
     width: 40px;
     height: 40px;
     position: relative;
-    left: 450px;
+    left: 25vw;
     top: 90px;
     margin: 0 20px;
 }
@@ -315,4 +316,33 @@ ul{
     background-color: red;
     height: 30px;
     width: 50px;
+}
+
+.contact-button{
+    left: 20vw;
+    position: relative;
+    color: white;
+    background-color: rgb(91, 161, 223);
+    padding: 10px 20px;
+    border-radius: 7px;
+    top: -10px;
+
+}
+
+.contact-button:hover{
+    text-decoration: none;
+    color: rgb(91, 161, 223);
+    background-color: white;
+
+}
+
+.diva{
+    font-weight: 300;
+    position: relative;
+    right: 22vw;
+    color: rgb(91, 161, 223);
+    background-color: rgb(255,255,255,70%);
+    width: 200px;
+    text-align: center;
+    border: 1.5px solid rgb(91, 161, 223);
 }
