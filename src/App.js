@@ -60,7 +60,7 @@ class App extends React.Component {
             <SignOut currentUser={this.state.currentUser}/>
             <Switch>
         <Route exact path='/playground' component={() => <Playground userRef={this.state.userRef} currentUser={this.state.currentUser}/>}/>
-            <Route exact path='/' component={Home} />
+            <Route exact path='/' component={() => <Home currentUser={this.state.currentUser}/>} />
             <Route exact path='/landing' component={LandingPage} />
             <Route exact path='/login' component={SignInPage} />
             <Route exact path='/sign-up' component={SignUpPage} />

@@ -7,11 +7,13 @@ import SignIn from '../../components/sign-in/sign-in.component';
 import SignUp from '../../components/sign-up/sign-up.component';
 import { HomeNav } from '../../components/home-nav-bar/home-nav-bar.component';
 import Face from '../../face.jpeg';
+import { auth} from '../../firebase/firebase.utils';
+import {withRouter} from 'react-router-dom';
 
 
 class Home extends React.Component{
-    constructor () {
-        super();
+    constructor (props) {
+        super(props);
         this.state={
             homedisplay:SlideShow
         }
@@ -32,11 +34,36 @@ class Home extends React.Component{
             <div className="left">
             <h1 className="home_title">CODE ONE</h1>
             <div className="subtitle">Design, build, and test your front end projects in our online playground. Develop with HTML, CSS, and JS and watch your projects come to life alongside your code!</div>
-            <div className="signin">
-            <button className="home-button" onClick={() => {this.updateHomeDisplay(SignIn)}}><span>Sign In</span></button>
-            <button className="home-button" onClick={() => {this.updateHomeDisplay(SignUp)}}><span>Create Account</span></button>
-            <button className="guest-button"><Link to='/playground'><span>Continue as Guest</span></Link></button>
-            </div>
+
+            {
+                this.props.currentUser?
+                    (
+                        <div className="signin">
+                        <button className="home-button" onClick={() => {this.props.history.push('profile')}}><span>Profile</span></button>
+                        <button className="home-button" onClick={() => {this.props.history.push('playground')}}><span>Playground</span></button>
+                        <button className="guest-button" onClick={()=>{
+                                                                        auth.signOut();
+                                                                        this.props.history.push('/');
+                                                                        }}
+                        >Sign Out</button>
+                        </div>
+                    )
+                    :
+                    (
+                        <div className="signin">
+                        <button className="home-button" onClick={() => {this.updateHomeDisplay(SignIn)}}><span>Sign In</span></button>
+                        <button className="home-button" onClick={() => {this.updateHomeDisplay(SignUp)}}><span>Create Account</span></button>
+                        <button className="guest-button" onClick={() => {this.props.history.push('playground')}} >Continue as Guest</button>
+                        </div>
+                    )
+            }
+
+
+
+
+
+
+
             </div>
             <div className="right">
             <HomeDisplay/>
@@ -68,4 +95,4 @@ class Home extends React.Component{
     }
 }
 
-export default Home;
+export default withRouter(Home);

@@ -54,10 +54,6 @@ class Playground extends Component {
 
 
   render () {
-    let home = '/'
-
-    if (this.props.currentUser)
-       home = '/profile';
 
 
     return (
@@ -68,7 +64,6 @@ class Playground extends Component {
       display={this.state.display}
       project={this.changeProjectName}
       projectname={this.state.projectname}
-      homepath={home}
       ></NavBar>
       <Container className="panellist">
         <PanelList

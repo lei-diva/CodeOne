@@ -2,10 +2,10 @@ import React from 'react';
 import './home-nav-bar.styles.css';
 import {Navbar} from 'react-bootstrap';
 
-export const HomeNav = ({homepath}) => (
+export const HomeNav = () => (
     <div className="home-nav">
     <Navbar className="navbar">
-    <Navbar.Brand className="logo" href={homepath}>
+    <Navbar.Brand className="logo" href="/">
     <span className="logo_open_tag">&#60; </span>
     <span className="logo_slash"> /</span>
     <span className="logo_close_tag">&#62;</span>
