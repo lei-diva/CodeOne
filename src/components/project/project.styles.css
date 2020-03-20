@@ -18,7 +18,6 @@
 
   .project-container:hover {
     transform: scale(1.03);
-    opacity: 100%;
     border: 2px solid white;
   }
 

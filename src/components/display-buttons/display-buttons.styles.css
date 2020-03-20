@@ -2,8 +2,7 @@
     transform:scale(0.95);
     display: inline-block !important;
     border: none;
-    color: white;
-    opacity: 50%;
+    color: rgb(139, 139, 139);
 
 }
 .display-button.show {
@@ -23,27 +22,23 @@
 .display-button.show:hover {
     border-radius: 5px !important;
     transform: scale(1.03);
-    opacity: 50%;
 }
 .show:focus {
     border-radius: 5px !important;
     transform: scale(1.03);
     color: white;
-    opacity: 100%;
 
 }
 
 .hide:focus {
     border-radius: 5px !important;
     transform: scale(1.03);
-    opacity: 50%;
 }
 
 .display-button.hide:hover {
     border-radius: 5px !important;
     transform: scale(1.03);
     color: white;
-    opacity: 100%;
 
 }
 
