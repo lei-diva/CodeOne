@@ -31,11 +31,11 @@ class Home extends React.Component{
 
         return (
             <div className="home">
-                <section id="home"></section>
+
 
                 <HomeNav className="home-nav" homepath='/'/>
                 <div className="nav-link">
-                <Scrollspy items={ ['home', 'features', 'about'] } currentClassName="is-current">
+               <Scrollspy items={ ['home', 'features', 'about'] } currentClassName="is-current">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#about">About</a></li>
@@ -48,9 +48,10 @@ class Home extends React.Component{
                     :
                     (null)
                     }
-                    </Scrollspy>
+                </Scrollspy>
 
             </div>
+            <section id="home"></section>
             <Row className="home-demo">
 
             <div className="left">
@@ -132,9 +133,9 @@ class Home extends React.Component{
                 <span className="footer-title">Build</span>
                     <li><Link classname="footer-link" to="/playground">Playground</Link></li>
                     </ul>
-                    <a href="https://www.linkedin.com/in/diva-lei-68b20b13b/"><img className="footer-icon" src={Github}/></a>
+                    <a href="https://github.com/lei-diva/CodeOne"><img className="footer-icon" src={Github}/></a>
 
-                <a href="https://github.com/lei-diva/CodeOne"><img className="footer-icon" src={LinkedIn}/></a>
+                <a href="https://www.linkedin.com/in/diva-lei-68b20b13b/"><img className="footer-icon" src={LinkedIn}/></a>
 
 
             </Row>

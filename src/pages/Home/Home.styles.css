@@ -276,6 +276,7 @@ ul{
     display: inline-block;
     margin: 0 30px;
 
+
 }
 
 .nav-link li a{
@@ -292,12 +293,12 @@ ul{
 
 .nav-link{
     background-color: red;
-    height: 0px;
-    width: 100vw;
-    z-index: 70;
+    height: 5px;
+    width: 60vw;
     top: -50px;
     left: -250px;
     position: absolute;
+    z-index: 60;
 
 }
 
@@ -308,4 +309,10 @@ ul{
     left: 450px;
     top: 90px;
     margin: 0 20px;
+}
+
+.test{
+    background-color: red;
+    height: 30px;
+    width: 50px;
 }
