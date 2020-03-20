@@ -95,7 +95,7 @@ class ProfilePage extends React.Component{
         return(
 
         <div className="profilepage">
-            <HomeNav homepath='/profile'/>
+            <HomeNav className="home-nav" homepath='/profile'/>
 
             <Jumbotron className="display-name">
             <img className="user-character" alt="usericon" src={Boy}></img>
@@ -130,6 +130,8 @@ class ProfilePage extends React.Component{
 
                         </Container>
                         </Jumbotron>
+
+
 
         </div>
     );
