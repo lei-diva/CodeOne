@@ -1,8 +1,16 @@
 .home {
     height: 100vh;
     overflow-y:scroll;
+
 }
 
+.home-demo{
+    background-color: rgba(255, 255, 255, 0.212);
+    width: 100vw !important;
+    height: 100vh !important;
+    position: relative;
+    left: 15px;
+}
 
 .home-nav{
     position: absolute;
@@ -73,16 +81,6 @@
     width: 500px;
 
 }
-/*
-.slideshow {
-    float: right;
-    width: 40vw;
-    height: 80vh;
-    left: 42px;
-    position: relative;
-    border-radius: 0px 20px 20px 0px;
-}
-*/
 
 
 
@@ -105,6 +103,8 @@
     background-color: rgb(83, 163, 232);
 
 }
+
+
 
 
 
@@ -154,14 +154,15 @@
     top: 12vh;
     background-color:transparent;
     border-radius: 10px 0px 0px 10px;
-    left: -20px;
+    left: 130px;
 
 }
 
 .right {
     position: relative;
     float:right !important;
-    bottom: 75vh;
+    left: 200px;
+    top: 50px;
 }
 
 
@@ -171,8 +172,6 @@
     position: relative;
     background-color: rgba(255, 255, 255, 0.493);
     left: 15px;
-    bottom: 400px;
-    float: left;
 }
 
 .about-text {
@@ -191,7 +190,7 @@
     font-family: 'Raleway', sans-serif;
     font-size: 45px;
     position: relative;
-    color:rgb(83, 163, 232)
+    color:rgb(83, 163, 232);
 
 }
 
@@ -204,4 +203,11 @@
     margin-left: 100px;
     width: 250px;
     height: 250px;
+}
+
+.feature {
+    position: relative;
+    width: 100vw !important;
+    height: 110vh;
+    left: 15px;
 }

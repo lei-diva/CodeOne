@@ -1,43 +1,30 @@
+
 .carousel {
-    width: 40vw !important;
-    height: 80vh !important;
-    overflow:hidden;
-    float: right;
-    top: 8vh;
-    left: 42px;
     position: relative;
-    border-radius: 5px 5px 5px 5px;
-    background-color: transparent;
-    /*background: rgba(82, 90, 150, 0.1);*/
+    left: 16vw;
+    top: 15vh;
 }
 
 
 
 .item {
-    height: 60vh;
-    width: 40vw;
 
+    height: 500px;
+    width: 1000px;
 }
-/*
-video {
-    display: none;
-    width: 40vw;
-    position: relative;
-    top: 120px;
-    height: 40vh;;
-}
-*/
+
+
 .slides {
-    width: 40vw;
-    position: relative;
-    top: 120px;
-    height: 40vh;;
+    left: 12vw;
+    top: 15vh;
+    height: 500px;
+    width: 1000px;
 }
 
 #prevIcon{
-    color: rgb(0, 141, 185);
+    color: rgb(94, 163, 224);
     font-family: 'Poppins', sans-serif;
-    font-size: 45px;
+    font-size: 60px;
     font-weight: 400;
     position: relative;
     left: -20px;
@@ -45,15 +32,20 @@ video {
 }
 
 #nextIcon{
-    color: rgb(0, 141, 185);
+    color: rgb(94, 163, 224);
     font-family: 'Poppins', sans-serif;
-    font-size: 45px;
+    font-size: 60px;
     font-weight: 400;
     position: relative;
     left: 20px;
     bottom: 15px;
 }
 
-h3 {
-    font-weight: 200;
+.features-title{
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    position: relative;
+    color:rgb(83, 163, 232);
+    top: 60px;
+    left: 170px;
 }

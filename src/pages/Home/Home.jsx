@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Row, Jumbotron} from 'react-bootstrap';
+import {Container, Row, Jumbotron, Carousel} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import './Home.styles.css'
 import { SlideShow } from '../../components/slide-show/slide-show.component';
@@ -9,13 +9,12 @@ import { HomeNav } from '../../components/home-nav-bar/home-nav-bar.component';
 import Face from '../../face.jpeg';
 import { auth} from '../../firebase/firebase.utils';
 import {withRouter} from 'react-router-dom';
-
-
+import {HomeLogo} from '../../components/home-logo/home-logo.component';
 class Home extends React.Component{
     constructor (props) {
         super(props);
         this.state={
-            homedisplay:SlideShow
+            homedisplay:HomeLogo
         }
     }
 
@@ -29,7 +28,7 @@ class Home extends React.Component{
         return (
             <div className="home">
                 <HomeNav className="home-nav" homepath='/'/>
-            <Container className="home-demo">
+            <Row className="home-demo">
 
             <div className="left">
             <h1 className="home_title">CODE ONE</h1>
@@ -69,7 +68,10 @@ class Home extends React.Component{
             <HomeDisplay/>
             </div>
 
-            </Container>
+            </Row>
+            <Row className="feature">
+            <SlideShow/>
+         </Row>
             <Row className="about">
                 <img className="face" src={Face}/>
                 <div className="about-text">
