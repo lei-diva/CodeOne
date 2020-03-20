@@ -10,6 +10,10 @@ import Face from '../../face.jpeg';
 import { auth} from '../../firebase/firebase.utils';
 import {withRouter} from 'react-router-dom';
 import {HomeLogo} from '../../components/home-logo/home-logo.component';
+import Scrollspy from 'react-scrollspy';
+import Github from '../../github.png'
+import LinkedIn from '../../linkedin.png'
+
 class Home extends React.Component{
     constructor (props) {
         super(props);
@@ -27,7 +31,26 @@ class Home extends React.Component{
 
         return (
             <div className="home">
+                <section id="home"></section>
+
                 <HomeNav className="home-nav" homepath='/'/>
+                <div className="nav-link">
+                <Scrollspy items={ ['home', 'features', 'about'] } currentClassName="is-current">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><Link to="/playground">Playground</Link></li>
+                    {
+                this.props.currentUser?
+                    (
+                        <li><Link to="/profile">Profile</Link></li>
+                    )
+                    :
+                    (null)
+                    }
+                    </Scrollspy>
+
+            </div>
             <Row className="home-demo">
 
             <div className="left">
@@ -69,10 +92,11 @@ class Home extends React.Component{
             </div>
 
             </Row>
-            <Row className="feature">
+            <Row className="feature" id="features">
             <SlideShow/>
          </Row>
             <Row className="about">
+                <section id="about"></section>
                 <img className="face" src={Face}/>
                 <div className="about-text">
                 <span className="about_title">About</span>
@@ -87,6 +111,33 @@ class Home extends React.Component{
 
             </Row>
 
+            <Row className="footer">
+                <div>
+                    <span className="footer_open_tag">&#60; </span>
+                    <span className="footer_slash big"> /</span>
+                    <span className="footer_close_tag big">&#62;</span>
+                </div>
+
+
+                    <Scrollspy items={ ['home', 'features', 'about'] } currentClassName="is-current">
+                    <span className="footer-title">Navigate</span>
+                    <li classname="footer-link"><a href="#home">Home</a></li>
+                    <li classname="footer-link"><a href="#features">Features</a></li>
+                    <li><a classname="footer-link" href="#about">About</a></li>
+
+
+
+                    </Scrollspy>
+                    <ul>
+                <span className="footer-title">Build</span>
+                    <li><Link classname="footer-link" to="/playground">Playground</Link></li>
+                    </ul>
+                    <a href="https://www.linkedin.com/in/diva-lei-68b20b13b/"><img className="footer-icon" src={Github}/></a>
+
+                <a href="https://github.com/lei-diva/CodeOne"><img className="footer-icon" src={LinkedIn}/></a>
+
+
+            </Row>
 
 
 
