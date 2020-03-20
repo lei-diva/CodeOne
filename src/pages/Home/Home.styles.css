@@ -154,7 +154,7 @@
     top: 12vh;
     background-color:transparent;
     border-radius: 10px 0px 0px 10px;
-    left: 130px;
+    left: 150px;
 
 }
 
@@ -293,7 +293,6 @@ ul{
 }
 
 .nav-link{
-    background-color: red;
     height: 5px;
     width: 70vw;
     top: -53px;
@@ -322,7 +321,7 @@ ul{
     left: 20vw;
     position: relative;
     color: white;
-    background-color: rgb(91, 161, 223);
+    background-color: #5ba1df;
     padding: 10px 20px;
     border-radius: 7px;
     top: -10px;
