@@ -1,6 +1,6 @@
 import React from 'react';
 import './home-logo.styles.css';
-import Play from '../../play.png';
+import Play from '../../images/play.png';
 
 export const PlayButton = () => (
     /*}

@@ -2,11 +2,11 @@ import React from 'react';
 import SignUp from '../../components/sign-up/sign-up.component';
 import './SignUp.styles.css';
 import {Carousel} from 'react-bootstrap';
-import first from '../../first-slide.png';
-import second from '../../second-slide.png';
-import third from '../../third-slide.png';
-import fourth from '../../fourth-slide.png';
-import fifth from '../../fifth-slide.png';
+import first from '../../images/first-slide.png';
+import second from '../../images/second-slide.png';
+import third from '../../images/third-slide.png';
+import fourth from '../../images/fourth-slide.png';
+import fifth from '../../images/fifth-slide.png';
 import { HomeNav } from '../../components/home-nav-bar/home-nav-bar.component';
 import {Link} from 'react-router-dom';
 

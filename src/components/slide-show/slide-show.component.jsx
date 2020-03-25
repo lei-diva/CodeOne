@@ -1,10 +1,10 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
-import first from '../../first-slide.png';
-import second from '../../second-slide.png';
-import third from '../../third-slide.png';
-import fourth from '../../fourth-slide.png';
-import fifth from '../../fifth-slide.png';
+import first from '../../images/first-slide.png';
+import second from '../../images/second-slide.png';
+import third from '../../images/third-slide.png';
+import fourth from '../../images/fourth-slide.png';
+import fifth from '../../images/fifth-slide.png';
 import './slide-show.styles.css';
 
 export const SlideShow = () => (

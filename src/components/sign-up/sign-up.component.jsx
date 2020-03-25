@@ -2,10 +2,10 @@ import React from 'react';
 import {FormInput} from '../form-input/form-input.component';
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 import './sign-up.styles.css';
-import EmailIcon from '../../mail.png';
-import PwdIcon from '../../password.png';
-import UserIcon from '../../user.png';
-import ConfirmIcon from '../../confirm.png';
+import EmailIcon from '../../images/mail.png';
+import PwdIcon from '../../images/password.png';
+import UserIcon from '../../images/user.png';
+import ConfirmIcon from '../../images/confirm.png';
 import { withRouter } from "react-router-dom";
 
 class SignUp extends React.Component {

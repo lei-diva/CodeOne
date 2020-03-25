@@ -3,8 +3,8 @@ import { Panel } from '../panel/panel.component';
 import './panel-list.styles.css'
 import { Row, Col, Alert } from 'react-bootstrap';
 import ExportButton from '../export-button/export-button.component';
-import SaveIcon from '../../save.png';
-import ProfileIcon from '../../profile.png';
+import SaveIcon from '../../images/save.png';
+import ProfileIcon from '../../images/profile.png';
 import {withRouter} from 'react-router-dom';
 
 
@@ -50,7 +50,7 @@ class PanelList extends Component{
   }
 
 
-  
+
 
 
     outputUpdate = () => {

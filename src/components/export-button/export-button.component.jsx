@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Down from '../../down-arrow.png';
+import Down from '../../images/down-arrow.png';
 import './export-button.styles.css';
 
 class ExportButton extends Component{

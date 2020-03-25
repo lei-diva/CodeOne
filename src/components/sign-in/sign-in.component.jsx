@@ -1,8 +1,8 @@
 import React from 'react';
 import './sign-in.styles.css';
 import {FormInput} from '../form-input/form-input.component';
-import EmailIcon from '../../mail.png';
-import PwdIcon from '../../password.png';
+import EmailIcon from '../../images/mail.png';
+import PwdIcon from '../../images/password.png';
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 import {withRouter} from 'react-router-dom';
 

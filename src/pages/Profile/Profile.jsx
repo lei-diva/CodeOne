@@ -6,7 +6,7 @@ import {SearchBox} from '../../components/search-box/search-box.component';
 import Playground from '../Playground/Playground';
 import {withRouter, Link} from 'react-router-dom';
 import {Jumbotron, Container} from 'react-bootstrap';
-import Boy from '../../boy.png'
+import Boy from '../../images/boy.png'
 
 
 

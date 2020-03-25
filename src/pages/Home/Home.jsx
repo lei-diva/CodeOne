@@ -6,14 +6,13 @@ import { SlideShow } from '../../components/slide-show/slide-show.component';
 import SignIn from '../../components/sign-in/sign-in.component';
 import SignUp from '../../components/sign-up/sign-up.component';
 import { HomeNav } from '../../components/home-nav-bar/home-nav-bar.component';
-import Face from '../../face.jpeg';
+import Face from '../../images/face.jpeg';
 import { auth} from '../../firebase/firebase.utils';
 import {withRouter} from 'react-router-dom';
 import {PlayButton} from '../../components/home-logo/home-logo.component';
 import Scrollspy from 'react-scrollspy';
-import Github from '../../github.png'
-import LinkedIn from '../../linkedin.png'
-import play from '../../play.png';
+import Github from '../../images/github.png'
+import LinkedIn from '../../images/linkedin.png'
 
 class Home extends React.Component{
     constructor (props) {
@@ -58,7 +57,7 @@ class Home extends React.Component{
             <section id="home"></section>
 
             <Row className="home-demo" md={6} lg={6}>
-            <Col className="left">
+            <Col className="left" xs={8}>
             <h1 className="home_title">CODE ONE</h1>
             <div className="subtitle">Design, build, and test your front end projects in our online playground. Develop with HTML, CSS, and JS and watch your projects come to life alongside your code!</div>
 
@@ -95,7 +94,7 @@ class Home extends React.Component{
 
 
             </Col>
-            <Col className="right">
+            <Col className="right" xs={4}>
             <HomeDisplay/>
             </Col>
 
