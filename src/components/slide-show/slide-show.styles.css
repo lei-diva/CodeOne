@@ -1,24 +1,25 @@
 
 .carousel {
     position: relative;
-    left: 16vw;
-    top: 15vh;
+    margin: 30px 0px 30px 150px;
+    min-width: 700px;
+
 }
 
 
 
 .item {
-
     height: 500px;
     width: 1000px;
+    margin: auto;
 }
 
 
 .slides {
-    left: 12vw;
-    top: 15vh;
+
     height: 500px;
     width: 1000px;
+    margin: auto;
 }
 
 #prevIcon{
@@ -46,6 +47,4 @@
     font-size: 45px;
     position: relative;
     color:rgb(83, 163, 232);
-    top: 60px;
-    left: 170px;
 }

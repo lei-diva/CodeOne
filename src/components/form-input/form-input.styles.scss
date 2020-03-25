@@ -10,8 +10,8 @@ $main-color: black;
 .group {
   position: relative;
   top: 120px;
-  left: 6vw;
   margin: 25px;
+  margin-left: 100px;
 
   .sign-in-icon {
     width: 40px;
@@ -29,7 +29,7 @@ $main-color: black;
     font-size: 18px;
     padding: 10px;
     display: block;
-    width: 23vw;
+    width: 95%;
     border: none;
     border-radius: 5px;
     border-bottom: 1px solid $sub-color;

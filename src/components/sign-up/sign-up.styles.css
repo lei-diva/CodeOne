@@ -4,19 +4,21 @@
   font-family: 'Raleway', sans-serif;
   color: rgba(94, 163, 224);
   position: relative;
-  top: 60px;
-  left: 30px;
+  top: 40px;
+  text-align: center;
+  padding: 0 50px;
 }
 .sign-up-form{
   position: relative;
-  top: -40px;
+  top: -70px;
+  width: 100%;
 }
 
 .home-button.sign-up-button{
   font-family: 'Raleway', sans-serif;
   position: relative;
   top: 150px;
-  left: 70px;
+  margin: auto;
   margin-top: 30px;
   border-radius: 30px;
   background-color: white;

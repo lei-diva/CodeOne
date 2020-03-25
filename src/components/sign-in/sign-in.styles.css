@@ -1,13 +1,13 @@
 .sign-in {
-    float: right;
     position: relative;
-    width: 35vw !important;
+    max-width: 450px;
+    min-width: 350px;
     top: 5vh;
-    right:2vw;
-    height: 80vh;
+    height: 600px;
     background-color: rgb(255,255,255,30%);
     z-index: 10;
     border-radius: 5%;
+    margin: auto;
 }
 
 .sign-in-title {
@@ -17,14 +17,14 @@
     color: rgba(94, 163, 224);
     position: relative;
     top: 80px;
-    left: 85px;
+    text-align: center;
 }
 
 .home-button.sign-in-button{
     font-family: 'Raleway', sans-serif;
     position: relative;
     top: 130px;
-    left: 70px;
+    margin: 20px auto;
     margin-top: 30px;
     border-radius: 30px;
     background-color: white;
