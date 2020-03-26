@@ -3,9 +3,9 @@
 Design, build, and test your front end projects in our online playground.
 Develop with HTML, CSS, and JS and watch your projects come to life alongside your code!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was hosted on [Heroku](https://www.heroku.com/) and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Installation
 
 In the project directory, you can run:
 
@@ -50,24 +50,43 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+https://facebook.github.io/create-react-app/docs/code-splitting
 
 ### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
 ### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
 ### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+https://facebook.github.io/create-react-app/docs/advanced-configuration
 
 ### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Usage
+
+![Code Alongside a Live Browser](./src/images/first-slide.png)
+
+![Export Files](./src/images/second-slide.png)
+
+![Save Projects](./src/images/third-slide.png)
+
+![Access old Projects](./src/images/fourth-slide.png)
+
+![Create New Projects](./src/images/fifth-slide.png)
+
+## Contribution
+Project created by Diva Lei.
+
+## Related Projects
+
+[Code Pen](https://codepen.io/pen/)
+
+## Licensing
+This project is licensed under the terms of the MIT license.
