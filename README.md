@@ -42,6 +42,26 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Usage
+
+![Code Alongside a Live Browser](./src/images/first-slide.png)
+
+![Export Files](./src/images/second-slide.png)
+
+![Save Projects](./src/images/third-slide.png)
+
+![Access old Projects](./src/images/fourth-slide.png)
+
+![Create New Projects](./src/images/fifth-slide.png)
+
+## Contribution
+Project created by Diva Lei.
+
+## Related Projects
+
+[Code Pen](https://codepen.io/pen/)
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -68,25 +88,6 @@ https://facebook.github.io/create-react-app/docs/advanced-configuration
 
 https://facebook.github.io/create-react-app/docs/deployment
 
-
-## Usage
-
-![Code Alongside a Live Browser](./src/images/first-slide.png)
-
-![Export Files](./src/images/second-slide.png)
-
-![Save Projects](./src/images/third-slide.png)
-
-![Access old Projects](./src/images/fourth-slide.png)
-
-![Create New Projects](./src/images/fifth-slide.png)
-
-## Contribution
-Project created by Diva Lei.
-
-## Related Projects
-
-[Code Pen](https://codepen.io/pen/)
 
 ## Licensing
 This project is licensed under the terms of the MIT license.
