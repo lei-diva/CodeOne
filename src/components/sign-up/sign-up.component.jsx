@@ -21,6 +21,7 @@ class SignUp extends React.Component {
   }
 
   handleSubmit = async event => {
+    /* User authentication with sign up */
     event.preventDefault();
 
     const { displayName, email, password, confirmPassword } = this.state;

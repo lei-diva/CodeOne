@@ -26,7 +26,7 @@ class Playground extends Component {
   }
 
   componentWillMount(){
-    try {
+    try { /* Start project with content if old project is selected */
       this.setState({content: this.props.location.state.content, projectname: this.props.location.state.projectname});
     } catch (error) {
       console.log('New project');
@@ -35,10 +35,10 @@ class Playground extends Component {
   }
 
   changeProjectName = (e) => {
-    this.setState({projectname: e.target.value});
+    this.setState({projectname: e.target.value}); /* Save project title name for export */
   }
 
-  changeDisplay = (id, e) =>{
+  changeDisplay = (id, e) =>{ /* toggle panels */
     let display_status = this.state.display[id];
     let display_copy = this.state.display;
 

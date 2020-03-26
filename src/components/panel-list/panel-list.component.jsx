@@ -21,13 +21,14 @@ class PanelList extends Component{
 
     }
 
-    componentDidMount () {
+    componentDidMount () { /* Initialize iframe with basic html structure */
             document.getElementById("out").contentWindow.document.write('<html><head><style type="text/css"></style></head><body></body></html');
             this.outputUpdate();
     }
 
 
   updateProject = () => {
+      /* Save project */
     console.log(this.props.userRef);
     console.log(this.props.projectname)
 
@@ -54,6 +55,7 @@ class PanelList extends Component{
 
 
     outputUpdate = () => {
+        /* Inject HTML, CSS, JS to iframe */
 
         var html = document.getElementById("out").contentWindow.document.getElementsByTagName('body')[0];
         console.log(html);
@@ -69,12 +71,14 @@ class PanelList extends Component{
     }
 
     typeUpdate = (letter, panel, e) =>{
+        /* Update content on change */
         const Lang = panel
         this.setState({[Lang]: letter}, this.outputUpdate);
 
     }
 
     fileUpdate= (letter, id, e) => {
+        /* Change file names */
         console.log(e.target.value);
         let new_file_names = this.state.file_names;
         new_file_names[id] = letter;

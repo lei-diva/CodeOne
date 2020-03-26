@@ -33,7 +33,7 @@ class Home extends React.Component{
             <div className="home">
 
 
-                <HomeNav className="home-nav"/>
+                <HomeNav className="home-nav"/> {/* NavBar for Home */}
                 <div className="nav-link">
                <Scrollspy items={ ['home', 'features', 'about'] } currentClassName="is-current">
 
@@ -77,7 +77,7 @@ class Home extends React.Component{
                     :
                     (
                         <div className="signin">
-                            {this.state.homedisplay === SignIn?
+                            {this.state.homedisplay === SignIn? /*change home buttons based on user status */
                             (
                                 <button className="home-button" onClick={() => {this.updateHomeDisplay(SignUp)}}><span>Create an Account</span></button>
                             )
@@ -95,16 +95,16 @@ class Home extends React.Component{
 
             </Col>
             <Col className="right" xs={4}>
-            <HomeDisplay/>
+            <HomeDisplay/> {/*Dynamically generate display */}
             </Col>
 
             </Row>
 
-            <Row className="feature" id="features">
+            <Row className="feature" id="features">{/* Feature section */}
             <SlideShow/>
          </Row>
 
-         <Row className="about">
+         <Row className="about"> {/* About section */}
 
                 <section id="about"></section>
                 <Col className="about-left" sm={4}>

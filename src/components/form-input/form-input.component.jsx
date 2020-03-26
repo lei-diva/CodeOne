@@ -2,7 +2,7 @@ import React from 'react';
 import './form-input.styles.scss';
 
 export const FormInput=({ handleChange, label, ...otherProps }) => (
-    <div>
+    <div> {/* Input Component */}
     <div className="group">
         <img className="sign-in-icon" src={otherProps.img_label}></img>
         <input className='form-input' onChange={handleChange} {...otherProps}/>

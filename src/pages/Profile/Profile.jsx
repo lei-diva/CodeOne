@@ -22,6 +22,7 @@ class ProfilePage extends React.Component{
     }
 
     componentDidMount() {
+        /* get request to database for projects */
 
         if (this.props.userRef){
             const {userRef} = this.props;
@@ -47,7 +48,7 @@ class ProfilePage extends React.Component{
         }
     }
 
-    selectProject = (content, projectname) => {
+    selectProject = (content, projectname) => { /* Pass props from selected project to playground */
         this.props.history.push({
             pathname: '/playground',
             state: {
@@ -57,7 +58,7 @@ class ProfilePage extends React.Component{
           })
         }
 
-    deleteProject = (project_name) => {
+    deleteProject = (project_name) => { /* Delete project */
         if (this.props.userRef){
         this.props.userRef.collection("projects").doc(project_name).delete()
         .then(()=> {
@@ -71,7 +72,7 @@ class ProfilePage extends React.Component{
     }
 }
 
-    handleSearch = (e) => {
+    handleSearch = (e) => { /* Search component */
         this.setState({searchField: e.target.value});
     }
 

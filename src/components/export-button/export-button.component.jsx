@@ -4,11 +4,12 @@ import './export-button.styles.css';
 
 class ExportButton extends Component{
 
-  download = (filename, text) => {
+  download = (filename, text) => {       /*Export feature */
         let down = document.createElement('a');
         down.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
         down.setAttribute('download', filename);
         down.click();
+
     }
 
   render() {
