@@ -2,6 +2,7 @@
 
 Design, build, and test your front end projects in our online playground.
 Develop with HTML, CSS, and JS and watch your projects come to life alongside your code!
+This web application was intended to optimize and simplify front end development by providing immediate visual feedback along with other useful tools. Code One was created over the course of two weeks and is my first React JS project.
 
 This project was hosted on [Heroku](https://www.heroku.com/) and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
