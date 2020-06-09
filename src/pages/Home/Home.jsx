@@ -1,8 +1,7 @@
 import React from 'react';
-import {Container, Row, Col, Navbar, Nav, Carousel} from 'react-bootstrap';
+import {Container, Row, Col, Navbar, Nav, Carousel, Jumbotron} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import './Home.styles.css'
-import { SlideShow } from '../../components/slide-show/slide-show.component';
+import './Home.css'
 import SignIn from '../../components/sign-in/sign-in.component';
 import SignUp from '../../components/sign-up/sign-up.component';
 import { HomeNav } from '../../components/home-nav-bar/home-nav-bar.component';
@@ -11,8 +10,10 @@ import { auth} from '../../firebase/firebase.utils';
 import {withRouter} from 'react-router-dom';
 import {PlayButton} from '../../components/home-logo/home-logo.component';
 import Scrollspy from 'react-scrollspy';
-import Github from '../../images/github.png'
-import LinkedIn from '../../images/linkedin.png'
+import {HomeLogo} from '../../components/home-logo/home-logo.component';
+import {Footer} from '../../components/footer/footer.component';
+import {Next} from '../../images/right.png';
+
 
 class Home extends React.Component{
     constructor (props) {
@@ -21,6 +22,14 @@ class Home extends React.Component{
             homedisplay:SignIn
         }
     }
+
+
+
+     handleSelect = (selectedIndex, e) => {
+        if (selectedIndex == 2) {
+            this.props.history.push('/playground');
+        }
+      };
 
     updateHomeDisplay = (dis) => {
         this.setState({homedisplay:dis});
@@ -31,9 +40,68 @@ class Home extends React.Component{
 
         return (
             <div className="home">
+                    <HomeNav/>
+            <div className="content">
+            <section id="intro">
+                <div className="intro-text">
 
 
-                <HomeNav className="home-nav"/> {/* NavBar for Home */}
+                <h1 className="home_title"><HomeLogo/>CODE ONE</h1>
+                <div class="clear"></div>
+
+            <div className="subtitle">Develop with HTML, CSS, and Javascript in your own virutal playground!</div>
+            <a className="get-started" href="/playground"><button className="home-button">GET STARTED</button></a>
+
+            </div>
+            <div>
+
+            </div>
+
+            </section>
+            <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
+                <path fill="white" fill-opacity="0.9" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+            </svg>
+
+            <div className="signin-home">
+                <section id="login-section">
+                <div className="medium-blog">
+                <blockquote className="embedly-card"><h4><a href="https://medium.com/@divaaleii/the-story-behind-code-one-c9dafd2efb69">The Story Behind Code One</a></h4><p>Code One is a project that helps front end developers better visualize and access their projects. I created Code One to offer functionality to other web developers like myself. This web application was intended to optimize and simplify front end development by providing immediate visual feedback along with other useful tools.</p></blockquote>
+                </div>
+
+
+                </section>
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="white" fill-opacity="0.9" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+</svg>
+                <section id="blog">
+
+
+
+            </section>
+            <br/>
+            <hr/>
+            <section id="about">
+
+
+            </section>
+            <br/>
+            <hr/>
+            <section id="contact">
+
+            </section>
+            </div>
+            </div>
+
+            </div>);
+    }
+}
+
+export default withRouter(Home);
+
+ {/*<div className="home">
+
+
+                <HomeNav className="home-nav"/> {/* NavBar for Home }
                 <div className="nav-link">
                <Scrollspy items={ ['home', 'features', 'about'] } currentClassName="is-current">
 
@@ -52,8 +120,44 @@ class Home extends React.Component{
 
                 </Scrollspy>
 
-            </div>
-            <Container className="home-container">
+                </div>           </div>
+
+ <Carousel interval={null} wrap={false} onSelect={this.handleSelect}activeIndex={1}>
+ <Carousel.Item>
+ <h2 className="next-text first">Dont have an account? Register</h2>
+ <SignIn/>
+
+ </Carousel.Item>
+
+ <Carousel.Item>
+
+ <h2 className="prev-text">Log In</h2>
+ <h2 className="next-text second">Continue as guest</h2>
+       <SignUp/>
+
+
+ </Carousel.Item>
+
+ <Carousel.Item>
+ </Carousel.Item>
+</Carousel>
+
+     <Col className="about-right" sm={8}>
+
+                    <p className="about-text"
+                    > I created Code One to offer functionality to other web developers like myself. This
+                        web application was intended to optimize and simplify front end development by providing
+                        immediate visual feedback along with other useful tools. Code One was created over the course
+                        of two weeks and is my first React JS project.
+                        <a href="mailTo:divaaleii@gmail.com" className="contact-button">Contact Me</a>
+                    </p>
+
+
+
+                </Col>
+
+
+     <Container className="home-container">
             <section id="home"></section>
 
             <Row className="home-demo" md={6} lg={6}>
@@ -77,101 +181,49 @@ class Home extends React.Component{
                     :
                     (
                         <div className="signin">
-                            {this.state.homedisplay === SignIn? /*change home buttons based on user status */
-                            (
-                                <button className="home-button" onClick={() => {this.updateHomeDisplay(SignUp)}}><span>Create an Account</span></button>
-                            )
-                            :
-                            (
-                                <button className="home-button" onClick={() => {this.updateHomeDisplay(SignIn)}}><span>Sign In</span></button>
-                            )
+                            {this.state.homedisplay === SignIn? /*change home buttons based on user status
+                                (
+                                    <button className="home-button" onClick={() => {this.updateHomeDisplay(SignUp)}}><span>Create an Account</span></button>
+                                )
+                                :
+                                (
+                                    <button className="home-button" onClick={() => {this.updateHomeDisplay(SignIn)}}><span>Sign In</span></button>
+                                )
+                            }
+
+                            <button className="guest-button" onClick={() => {this.props.history.push('playground')}} >Continue as Guest</button>
+                            </div>
+                        )
                         }
-
-                        <button className="guest-button" onClick={() => {this.props.history.push('playground')}} >Continue as Guest</button>
-                        </div>
-                    )
-                    }
-
-
-            </Col>
-            <Col className="right" xs={4}>
-            <HomeDisplay/> {/*Dynamically generate display */}
-            </Col>
-
-            </Row>
-
-            <Row className="feature" id="features">{/* Feature section */}
-            <SlideShow/>
-         </Row>
-
-         <Row className="about"> {/* About section */}
-
-                <section id="about"></section>
-                <Col className="about-left" sm={4}>
-                <span className="about_title">About</span>
-
-                <img className="face" src={Face}/>
-                <div className="diva">Diva Lei</div>
-        </Col>
-
-
-                <Col className="about-right" sm={8}>
-
-                    <p className="about-text"
-                    > I created Code One to offer functionality to other web developers like myself. This
-                        web application was intended to optimize and simplify front end development by providing
-                        immediate visual feedback along with other useful tools. Code One was created over the course
-                        of two weeks and is my first React JS project.
-                        <a href="mailTo:divaaleii@gmail.com" className="contact-button">Contact Me</a>
-                    </p>
-
 
 
                 </Col>
+                <Col className="right" xs={4}>
+                <HomeDisplay/>
+                </Col>
 
-            </Row>
+                </Row>
 
-            <Row className="footer">
-                <div>
-                    <span className="footer_open_tag">&#60; </span>
-                    <span className="footer_slash big"> /</span>
-                    <span className="footer_close_tag big">&#62;</span>
-                </div>
+                <Row className="feature" id="features">
+             </Row>
 
+             <Row className="about">
 
-                    <Scrollspy items={ ['home', 'features', 'about'] } currentClassName="is-current">
-                    <span className="footer-title">Navigate</span>
-                    <li classname="footer-link"><a href="#home">Home</a></li>
-                    <li classname="footer-link"><a href="#features">Features</a></li>
-                    <li><a classname="footer-link" href="#about">About</a></li>
+                    <section id="about"></section>
+                    <Col className="about-left" sm={4}>
+                    <span className="about_title">About</span>
 
-
-
-                    </Scrollspy>
-                    <ul>
-                <span className="footer-title">Build</span>
-                    <li><Link classname="footer-link" to="/playground">Playground</Link></li>
-                    </ul>
-
-                    <ul>
-                <span className="footer-title">User</span>
-                    <li><Link classname="footer-link" to="/login">Sign In</Link></li>
-                    <li><Link classname="footer-link" to="/sign-up">Create an Account</Link></li>
-                    </ul>
-                    <a href="https://github.com/lei-diva/CodeOne"><img className="footer-icon" src={Github}/></a>
-
-                <a href="https://www.linkedin.com/in/diva-lei-68b20b13b/"><img className="footer-icon" src={LinkedIn}/></a>
+                    <img className="face" src={Face}/>
+                    <div className="diva">Diva Lei</div>
+            </Col>
 
 
-            </Row>
 
 
-            </Container>
+                </Row>
 
 
-            </div>
-        );
-    }
-}
 
-export default withRouter(Home);
+
+                </Container>
+            */}

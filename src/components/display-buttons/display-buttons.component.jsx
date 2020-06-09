@@ -1,21 +1,38 @@
 import React from 'react';
 import './display-buttons.styles.css';
+import {useSelector, useDispatch} from 'react-redux';
+import {toggledisplay} from '../../actions';
+import {Nav} from 'react-bootstrap';
 
-export const DisplayButtons = (props) =>
-(
-    <div className="display_buttons">
-    {props.panels.map((panel, id) => (
+export const DisplayButtons = () =>
+{
+    const panels = useSelector(state=>state.playground.panels);
+    const dispatch = useDispatch();
+    let dis;
 
-            <button
-                className={`${panel} ${props.display[id]} display-button`}
+    return (
+
+        Object.keys(panels).map((panel, id) =>
+            {
+                panels[panel].display?
+                    dis = "show":
+                    dis = "hide"
+
+
+                return (
+
+            <Nav.Link
+                className={`${dis} display-button`}
                 key={id}
-                onClick={(e) => {props.change(id, e)}}>
+                onClick = {()=>dispatch(toggledisplay(panel))}
+            >
             {panel.toUpperCase()}
-            </button>
+            </Nav.Link>
+                )
 
+        }
         )
-    )}
-    </div>
 
 
-);
+    );
+}

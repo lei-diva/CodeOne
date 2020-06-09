@@ -1,14 +1,35 @@
-.sign-in-up-button{
-    background-color: transparent;
-    color: white;
-    width: 100px;
-    border:1px solid white;
-    font-size: 18px;
-    font-weight: 200;
-    height: 39px;
-    margin-right: 15px;
-    margin-top: 5px;
+.sign-in-up-buttons{
+   width: 200px;
+
 }
+
+.sign-in-button{
+    background-color: transparent;
+    color:rgb(255, 255, 255, 80%) !important;
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align:center;
+    margin:auto;
+}
+
+.sign-up-button{
+    background-color: transparent;
+    color: white !important;
+
+    font-size: 18px;
+    font-weight: 500;
+    text-align:center;
+    margin:auto;
+    border-radius:4px;
+    border: 1px solid white;
+    height: 37px;
+    padding-top: 4px !important;
+    margin-bottom: 3px !important;
+
+
+}
+
 
 .home-demo-container{
     display: flex;
@@ -21,28 +42,39 @@
 }
 
 
-.sign-in-up-button:hover {
-    background-color:  white !important;
-    color: rgb(83, 163, 232);
-    border: 1px solid white;
+.sign-in-button:hover {
+    color: rgb(255, 255, 255) !important;
+}
+
+.sign-up-button:hover {
+    background-color: white;
+    color: rgb(83, 163, 232) !important;
+
+}
+
+
+.sign-out-button.dropdown-signout{
+    margin-left: 15px !important;
+    margin-top: -5px !important;
+    font-weight: 400;
+    color: rgb(58, 58, 58) !important;
+}
+
+.sign-out-button.dropdown-signout:hover{
+    color: rgb(74, 74, 74) !important;
 }
 
 .sign-out-button{
     background-color: transparent;
-    color: white;
-    width: 100px;
-    border:none;
-    font-size: 16px;
-    font-weight: 200;
-    height: 39px;
-    margin-right: 20px;
-    margin-top: 5px;
-    z-index: 60;
+    color: white !important;
+    width: 180px;
+    font-size: 18px;
+    margin-bottom: -5px;
 }
 
 .sign-out-button:hover{
-    color: #212121;
-    background-color: transparent;
+
+
     border:none;
     outline: none;
     box-shadow: none;
@@ -53,6 +85,100 @@
     background-color: transparent;
     outline: none;
     box-shadow: none;
-    border: 1px solid white;
+    border: none;
+
+}
+
+
+@media (min-width: 992px) {
+
+.sign-up-button{
+    width: 90px !important;
+}
+
+
+}
+@media (max-width: 991px){
+    .sign-in-up-buttons{
+        width: 100%;
+    }
+
+    .sign-in-up-buttons {
+        margin: auto;
+        margin-top: -7px !important;
+    }
+
+
+    .sign-up-button.nav{
+      border: none;
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 20px !important;
+      width: 100%;
+      color: rgb(63, 63, 63) !important;
+      height: 45px;
+
+
+    }
+
+    .sign-up-button{
+        padding-top: 8px !important;
+    }
+
+    .sign-up-button:hover {
+        color: rgb(63, 63, 63) !important;
+        background-color: rgb(198, 226, 255, 90%) !important;
+
+
+    }
+
+    .sign-in-button.nav{
+        width: 100% !important;
+        font-size: 20px;
+        font-weight: 300;
+        color: rgb(63, 63, 63) !important;
+      }
+
+      .sign-in-button:hover {
+          color: rgb(63, 63, 63) !important;
+          background-color: rgb(198, 226, 255, 50%) !important;
+      }
+
+      .nav-link:hover {
+        background-color: rgb(198, 226, 255, 50%);
+      }
+
+      .sign-out-button {
+        border: none;
+        font-size: 20px;
+        font-weight: 300;
+        padding-bottom: 20px !important;
+        width: 100%;
+        color: rgb(63, 63, 63) !important;
+      }
+
+      .sign-out-button:hover {
+          color: rgb(101, 101, 101) !important;
+      }
+}
+
+
+
+.sign-in-modal{
+    width: 450px !important;
+
+
+
+}
+
+.modal-content {
+    overflow-y:scroll;
+    border: none !important;
+    margin: auto;
+    border-radius: 10px !important;
+}
+
+.sign-up-modal{
+    width: 450px !important;
 
 }

@@ -1,44 +1,36 @@
 import React, {Component} from 'react';
 import PanelList from '../../components/panel-list/panel-list.component';
-import { NavBar } from '../../components/navbar/navbar.component';
+import { PlaygroundNavBar } from '../../components/playgroundnavbar/playgroundnavbar.component';
+import { Footer } from '../../components/footer/footer.component';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
+import {Container, Row, Col} from 'react-bootstrap';
 import './Playground.css';
 import {withRouter} from 'react-router-dom';
 import {addCollectionandDocuments} from '../../firebase/firebase.utils';
-
-class Playground extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      panels: ['Html', 'Css', 'Js'],
-      display: ['show', 'show', 'show'],
-      projectname: '',
-      content: {
-        Html: '',
-        Css: '',
-        Js: ''
-      }
+import {HomeNav} from '../../components/home-nav-bar/home-nav-bar.component';
 
 
-    }
-  }
-
+const Playground = () => {
+/*
   componentWillMount(){
-    try { /* Start project with content if old project is selected */
+    try { /
       this.setState({content: this.props.location.state.content, projectname: this.props.location.state.projectname});
     } catch (error) {
       console.log('New project');
     }
 
   }
+  put in output.js
+  */
 
+  /* put in projectname.js
   changeProjectName = (e) => {
-    this.setState({projectname: e.target.value}); /* Save project title name for export */
+    this.setState({projectname: e.target.value}); /* Save project title name for export
   }
 
-  changeDisplay = (id, e) =>{ /* toggle panels */
+*/
+/*move to playground navbar
+  changeDisplay = (id, e) =>{
     let display_status = this.state.display[id];
     let display_copy = this.state.display;
 
@@ -52,35 +44,25 @@ class Playground extends Component {
     }
   }
 
-
-  render () {
+  */
 
 
     return (
       <div className="general">
-      <NavBar
-      panels={this.state.panels}
-      change={this.changeDisplay}
-      display={this.state.display}
-      project={this.changeProjectName}
-      projectname={this.state.projectname}
-      ></NavBar>
+
+      <PlaygroundNavBar/>
       <Container className="panellist">
-        <PanelList
-        userRef={this.props.userRef}
-        panels={this.state.panels}
-        display={this.state.display}
-        content={this.state.content}
-        projectname={this.state.projectname}
-        currentUser={this.props.currentUser}
-        ></PanelList>
+        <PanelList/>
+        <Footer/>
       </Container>
+
+
+
 
 
 
       </div>
     );
   }
-}
 
 export default withRouter(Playground);

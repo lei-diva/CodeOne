@@ -1,8 +1,19 @@
+.sign-in.sign-up {
+
+  border-radius: 10px;
+  background: linear-gradient(to bottom right ,rgb(44, 189, 199), rgba(43, 127, 228));
+  margin:auto;
+  width: 450px;
+  position: relative;
+
+}
+
 .sign-up-title {
   font-size: 30px;
   font-weight: 300;
-  font-family: 'Raleway', sans-serif;
-  color: rgba(94, 163, 224);
+  font-family: 'Quicksand', sans-serif;
+
+  color: white;
   position: relative;
   top: 40px;
   text-align: center;
@@ -15,7 +26,8 @@
 }
 
 .home-button.sign-up-button{
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
   position: relative;
   top: 150px;
   margin: auto;
@@ -36,3 +48,5 @@
   color: white;
   border: 1px solid white;
 }
+
+

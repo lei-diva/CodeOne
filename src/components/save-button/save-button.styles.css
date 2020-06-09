@@ -1,0 +1,28 @@
+
+.save_button {
+    width: 38px;
+    height: 38px;
+    margin:auto;
+
+
+}
+
+
+.save_button:hover {
+    transform: scale(1.10);
+
+}
+
+.save_button:focus {
+    outline: none;
+    box-shadow: none;
+    border:none;
+    transform: scale(1);
+}
+
+
+@media (max-width: 991px) {
+    .save-text{
+        margin-top: -10px !important;
+    }
+}

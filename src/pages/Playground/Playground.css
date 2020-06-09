@@ -1,6 +1,25 @@
+
+
 .panellist {
   width: 100%;
   float: left;
   padding: 0;
+  position: relative;
+
+
+}
+
+.general {
+    width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+    height: 100vh;
+    position: relative;
+    overflow-y: scroll;
+    background-image: url('../../images/background-blue.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center center;
+  background-attachment: fixed;
 }
 

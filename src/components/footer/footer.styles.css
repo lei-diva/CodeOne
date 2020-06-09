@@ -1,0 +1,150 @@
+
+.footer {
+    position: absolute;
+    width:100vw;
+
+    background: linear-gradient(to right,rgb(31, 114, 215),rgb(44, 189, 199));
+    bottom: 0;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    left: 0;
+    font-family: 'Raleway', sans-serif;
+  }
+
+
+.footer_open_tag {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    color: white;
+    position: relative;
+    left: 2.5rem;
+    top: 20px;
+    font-weight: 300;
+}
+
+.footer-hr {
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+.footer_slash {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    position: relative;
+    color:white;
+    left: 1rem;
+    top: 20px;
+    font-weight: 300;
+}
+
+.footer_close_tag {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    color: white;
+    position: relative;
+    top: 20px;
+    left: 1rem;
+    font-weight: 300;
+}
+
+.social-media {
+    margin-top: 90px;
+    height: 50px;
+
+
+}
+
+.footer-icon {
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin-left: 30px;
+
+}
+
+.footer-icon-email {
+    margin-top: 2px;
+}
+
+
+.footer-nav-link {
+    color: rgb(255, 255, 255);
+
+
+}
+
+.footer-nav-link:hover {
+    color: rgb(70, 70, 70);
+
+}
+
+
+  .footer-title {
+      margin-top:0.75rem;
+    color: rgb(255, 255, 255);
+    width: 250px;
+
+  }
+
+  .footer-nav {
+    padding-left: 0;
+  }
+
+
+  .footer-nav-item{
+    display: block;
+    float: left;
+    margin-right: 20px;
+
+    position: relative;
+
+  }
+
+  .footer-copyright{
+    color: rgb(255, 255, 255);
+  }
+
+  @media (min-width: 992px) {
+
+  .footer-nav {
+      float:right;
+
+    }
+
+    .footer {
+      height: 300px;
+    }
+  }
+
+
+  @media (max-width: 991px) and (min-width: 571px) {
+    .footer {
+
+    height: 325px;
+    }
+
+    .footer-copyright{
+        margin-bottom: 2px !important;
+    }
+  }
+
+  @media (max-width: 570px) and (min-width: 500px){
+    .footer {
+      height: 340px;
+      padding-left: 5vw;
+      padding-right: 5vw;
+
+    }
+    .footer-copyright{
+        margin-bottom: 2px !important;
+    }
+  }
+
+  @media (max-width: 499px) {
+      .footer {
+          height: 400px;
+          padding-bottom: 30px !important;
+      }
+      .social-media {
+          display:none;
+      }
+  }

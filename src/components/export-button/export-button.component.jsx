@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import Down from '../../images/down-arrow.png';
+import Down from '../../images/export.png';
 import './export-button.styles.css';
+import {useSelector} from 'react-redux';
+import {Nav, OverlayTrigger, Tooltip} from 'react-bootstrap';
 
-class ExportButton extends Component{
+const ExportButton =() => {
+  const {Html, Css, Js} = useSelector(state=> state.playground.panels);
 
-  download = (filename, text) => {       /*Export feature */
+
+  const download = (filename, text) => {       /*Export feature */
         let down = document.createElement('a');
         down.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
         down.setAttribute('download', filename);
@@ -12,22 +16,29 @@ class ExportButton extends Component{
 
     }
 
-  render() {
     return (
-    <div>
-    <button
-      className="export-button"
-     onClick={(e) => {
-       this.download(this.props.file_names[0], this.props.html);
-       this.download(this.props.file_names[1], this.props.css);
-       this.download(this.props.file_names[2], this.props.js);
+
+      <OverlayTrigger
+      placement='bottom'
+      className="tooltip"
+        overlay={
+          <Tooltip>
+            Export
+          </Tooltip>
+        }
+      >
+    <Nav.Link className="export" onClick={(e) => {
+       download(Html.filename, Html.content);
+       download(Css.filename, Css.content);
+       download(Js.filename, Js.content);
        }}>
-    <img className="export-icon" alt="export" src={Down}></img>
+    <img className="export-button" src={Down}></img>
+    <span className="display-button text">Export</span>
+    </Nav.Link>
+    </OverlayTrigger>
 
-    </button>
 
-    </div>
 )}
-    }
+
 
 export default ExportButton;

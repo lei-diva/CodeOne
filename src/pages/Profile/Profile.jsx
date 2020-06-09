@@ -7,6 +7,7 @@ import Playground from '../Playground/Playground';
 import {withRouter, Link} from 'react-router-dom';
 import {Jumbotron, Container} from 'react-bootstrap';
 import Boy from '../../images/boy.png'
+import {useSelector} from 'react-redux';
 
 
 
@@ -21,16 +22,21 @@ class ProfilePage extends React.Component{
         }
     }
 
+    mapStateToProps = state => ({
+        userRef: state.userRef,
+        currentUser: state.currentUser
+
+      });
+
+
     componentDidMount() {
         /* get request to database for projects */
 
-        if (this.props.userRef){
-            const {userRef} = this.props;
-           userRef.collection("projects").get()
+        if (this.userRef){
+           this.userRef.collection("projects").get()
            .then(querySnapshot => {
             const oldprojects = this.state.projects;
             querySnapshot.forEach( doc => {
-                console.log(doc);
                 const newproject = {
                     name: doc.id,
                     content: doc.data(),
@@ -59,8 +65,8 @@ class ProfilePage extends React.Component{
         }
 
     deleteProject = (project_name) => { /* Delete project */
-        if (this.props.userRef){
-        this.props.userRef.collection("projects").doc(project_name).delete()
+        if (this.userRef){
+        this.userRef.collection("projects").doc(project_name).delete()
         .then(()=> {
             let newprojects = this.state.projects;
             newprojects = newprojects.filter((project)=>(project.name != project_name));
@@ -79,14 +85,12 @@ class ProfilePage extends React.Component{
 
     render(){
         let display = ''
-        if (this.props.currentUser){
-            display = this.props.currentUser.displayName;
-        }
-
         let id = ''
-        if (this.props.currentUser){
+        if (this.currentUser){
+            display = this.currentUser.displayName;
             id = this.props.currentUser.id;
         }
+
 
         console.log(display);
         const { projects, searchField } = this.state;
@@ -97,10 +101,7 @@ class ProfilePage extends React.Component{
 
         <div className="profilepage">
             <HomeNav className="home-nav"/>
-            <div className="sign-in-nav-link">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/playground">Playground</Link></li>
-            </div>
+
             <Jumbotron className="display-name">
             <img className="user-character" alt="usericon" src={Boy}></img>
             <div className="profile-title">

@@ -59,8 +59,8 @@ class SignUp extends React.Component {
   render() {
     const { displayName, email, password, confirmPassword } = this.state;
     return (
-        <div className="sign-in">
-        <div className="sign-up-title">Don't have an account? Sign up!</div>
+        <div className="sign-in sign-up">
+        <div className="sign-up-title">Register</div>
         <form className='sign-up-form' onSubmit={this.handleSubmit}>
           <FormInput
             type='text'
@@ -95,11 +95,12 @@ class SignUp extends React.Component {
             value={confirmPassword}
             onChange={this.handleChange}
             label='Confirm Password'
-            img_label={ConfirmIcon}
+            img_label={PwdIcon}
             required
           />
-          <button className="home-button sign-up-button" type='submit'>Sign Up</button>
+          <button className="home-button sign-in-button" type='submit'>Continue</button>
         </form>
+        <p className="log-in-option">Already have an account? <span className="here" onClick={()=> {this.props.hideSignUp();this.props.showLogIn()}}>Log in.</span></p>
       </div>
     );
   }

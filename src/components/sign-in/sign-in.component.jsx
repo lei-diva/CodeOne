@@ -3,8 +3,10 @@ import './sign-in.styles.css';
 import {FormInput} from '../form-input/form-input.component';
 import EmailIcon from '../../images/mail.png';
 import PwdIcon from '../../images/password.png';
+import {Logo} from '../../components/logo/logo.component';
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 import {withRouter} from 'react-router-dom';
+import {Modal} from 'react-bootstrap';
 
 class SignIn extends React.Component {
     constructor(props){
@@ -22,7 +24,7 @@ class SignIn extends React.Component {
 
         try {
             await auth.signInWithEmailAndPassword(email, password);
-            this.setState({email: '', password: ''}, ()=> this.props.history.push('/'));
+            this.setState({email: '', password: ''});
         } catch (error) {
             console.log(error);
         }
@@ -38,8 +40,12 @@ class SignIn extends React.Component {
 
     render() {
         return(
-            <div className="sign-in">
-                <div className="sign-in-title">Sign in with your email</div>
+
+
+
+            <div className="sign-in log-in  ">
+
+                <div className="sign-in-title">Log in with your email</div>
 
                 <form onSubmit={this.handleSubmit}>
 
@@ -62,14 +68,15 @@ class SignIn extends React.Component {
                     required/>
 
                 </form>
-                <button className="home-button sign-in-button" onClick={this.handleSubmit}>Submit</button>
-                {/* Bug with Google Auth popup window}
+                <button className="home-button sign-in-button" onClick={this.handleSubmit}>Continue</button>
 
-                <button className="home-button sign-in-button" onClick={signInWithGoogle}>
-                    Sign in with Google
+
+                <button className="home-button sign-in-button google" type="button" onClick={signInWithGoogle}>
+                    Log in with Google
                 </button>
-        {*/}
+                <p className="log-in-option">Dont have an account? <span className="here" onClick={()=> {this.props.hideLogIn();this.props.showSignUp()}}>Register here.</span></p>
             </div>
+
         )
     }
 
