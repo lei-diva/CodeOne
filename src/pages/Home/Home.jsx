@@ -104,24 +104,12 @@ export const Home = () => {
                 {*/}
                 <img className="blog-photo" src={Blue}/>
                 <h2>The Production of Code One</h2>
-                <p>Code One is a project that helps front end developers better visualize and access their projects. I created Code One to offer functionality to other web developers like myself.
-                    This web application was intended to optimize and simplify front end development by providing immediate visual feedback along with other useful tools.
-                     My main focus was to create a functional and easy-to-use web application. Code One was created over the course of two weeks and was created with React Js.
-                </p>
-                <p>Just a few weeks ago, I decided I wanted to steer my software engineering career towards the specialty of web development. I developed an interest and curiosity for ReactJs,
-                    and the best way to learn it was the build with it. During my journey in becoming a developer, I was caught in many inefficient habits of development, the main one being the
-                    constant refreshing of the browser. This problem further inspired the creation of Code One.</p>
-                    <br/>
-             {/*}
-                <h3>Technologies</h3>
-                <p>
-                    Code one is hosted on Heroku. The entire application was created using the React Js library. Routing was implemented using React Router Dom and user authentication/storage was
-                    done with FireBase.</p>
-                <h3>Features</h3>
-                <p>The main feature of Code One is the Playground. The playground allows the user to write HTML, CSS, and JS code as a live browser updates itself.
-                Export — The user can change file names and export files onto their device. Save — If logged in, the user can save projects to their account and access it later
-                </p>
-            {*/}
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Phasellus egestas tellus rutrum tellus pellentesque eu. Sed felis eget velit aliquet sagittis id. Neque viverra justo nec ultrices dui sapien eget mi. Enim sit amet venenatis urna cursus. Phasellus vestibulum lorem sed risus ultricies tristique. Aliquet nec ullamcorper sit amet risus nullam eget felis. Nibh praesent tristique magna sit amet purus gravida quis blandit. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Sagittis aliquam malesuada bibendum arcu. Nulla at volutpat diam ut venenatis tellus in metus. Amet tellus cras adipiscing enim. Erat imperdiet sed euismod nisi porta. Elit ullamcorper dignissim cras tincidunt lobortis. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Maecenas ultricies mi eget mauris. Neque viverra justo nec ultrices.
+
+Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Enim nulla aliquet porttitor lacus. Euismod lacinia at quis risus sed. Risus ultricies tristique nulla aliquet enim tortor. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Vel turpis nunc eget lorem dolor sed viverra ipsum. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi. Amet cursus sit amet dictum sit amet justo donec enim. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Morbi tristique senectus et netus et malesuada fames ac. Tortor condimentum lacinia quis vel. Nec feugiat in fermentum posuere. Felis bibendum ut tristique et egestas quis ipsum suspendisse. Tempor nec feugiat nisl pretium fusce id.</p>
+               <p>Faucibus in ornare quam viverra orci sagittis eu volutpat odio. Quam viverra orci sagittis eu volutpat. Congue mauris rhoncus aenean vel elit scelerisque mauris. Aliquam faucibus purus in massa tempor. Neque sodales ut etiam sit amet. Lacus sed viverra tellus in hac habitasse platea. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Est lorem ipsum dolor sit amet consectetur. In aliquam sem fringilla ut morbi tincidunt. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat in. Scelerisque in dictum non consectetur a erat nam at. Dignissim enim sit amet venenatis urna cursus eget. Est ante in nibh mauris cursus. Consectetur purus ut faucibus pulvinar elementum integer. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Cursus in hac habitasse platea dictumst quisque sagittis. Consequat nisl vel pretium lectus quam id. A pellentesque sit amet porttitor eget dolor morbi non. Quis lectus nulla at volutpat.</p>      <br/>
+
                 </div>
 
 

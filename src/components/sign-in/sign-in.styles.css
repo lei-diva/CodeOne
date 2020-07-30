@@ -31,9 +31,14 @@
     width: 270px;
     background: transparent;
     height: 50px;
+    border: 2px solid white;
 
 
+}
 
+.home-button.sign-in-button:hover {
+    color: rgb(44, 189, 199);
+    background-color: transparent;
 }
 
 .home-button.sign-in-button.google{
