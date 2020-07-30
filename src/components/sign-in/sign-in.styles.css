@@ -31,7 +31,8 @@
     width: 270px;
     background: transparent;
     height: 50px;
-    border: 2px solid white;
+    border: 1px solid #fff;
+    font-weight: 200;
 
 
 }
