@@ -55,10 +55,13 @@
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: hsla(0,0%,100%,.7);
+    color: hsla(0,0%,100%) !important;
 }
 
 .navbar-dark .navbar-nav .nav-link.active{
-    font-size:20px
+    font-size:20px !important;
 }
 
+.navbar-expand-lg .navbar-nav {
+    font-size: 17px !important;
+}
