@@ -55,7 +55,7 @@
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: hsla(0,0%,100%) !important;
+    color: hsla(0,0%,100%);
 }
 
 .navbar-dark .navbar-nav .nav-link.active{
