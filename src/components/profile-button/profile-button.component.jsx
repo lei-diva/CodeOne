@@ -26,7 +26,7 @@ return (
 
     <Dropdown.Item className={`profile-nav-playground ${props.className}`} onClick={() => {props.history.push('/playground')}}>Playground</Dropdown.Item>
 
-    <Dropdown.Item onClick={() => {props.history.push('profile')}}>My Projects</Dropdown.Item>
+    <Dropdown.Item onClick={() => {props.history.push('profile');window.location.reload();}}>My Projects</Dropdown.Item>
 
     <Dropdown.Divider />
     <SignOut className="dropdown-signout"/>

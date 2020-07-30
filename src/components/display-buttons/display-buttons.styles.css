@@ -2,7 +2,7 @@
 
     display: inline-block !important;
     border: none;
-    color: rgb(104, 104, 104) !important;
+    color: rgb(216, 216, 216) !important;
 
 }
 .display-button.show {
@@ -17,7 +17,7 @@
     font-size: 20px !important;
     text-align: center;
     position: relative;
-    width: 10rem;
+
 
 
 }
@@ -25,7 +25,7 @@
 @media (min-width:992px){
 
     .display-button.show:hover {
-        color: rgb(104, 104, 104)!important;
+        color: rgb(216, 216, 216) !important;
     }
 
 

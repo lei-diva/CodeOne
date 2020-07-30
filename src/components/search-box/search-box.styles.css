@@ -3,16 +3,16 @@
   border:2px solid rgb(83, 163, 232);
   outline: none;
   padding: 10px;
-  width: 150px;
-  width: 400px;
+  float: right;
   position: absolute;
+  right: 20px;
+
+  width: 400px;
   border-radius: 5px;
   height: 38px;
-  font-size: 13px;
-  float: right;
-  right: 20px;
-  z-index:50;
-  top: 5px;
+  font-size: 15px;
+
+  font-weight: 200;
 }
 
 

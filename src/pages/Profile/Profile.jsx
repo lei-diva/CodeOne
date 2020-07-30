@@ -7,8 +7,20 @@ import Playground from '../Playground/Playground';
 import {withRouter, Link} from 'react-router-dom';
 import {Jumbotron, Container} from 'react-bootstrap';
 import Boy from '../../images/boy.png'
-import {useSelector} from 'react-redux';
+import {connect} from 'react-redux';
+import { css } from "@emotion/core";
+import PropagateLoader from "react-spinners/PropagateLoader";
+import {Footer} from '../../components/footer/footer.component';
+import {Nav, OverlayTrigger, Tooltip, Toast} from 'react-bootstrap';
 
+
+const override = css`
+  position: relative;
+  margin:auto;
+  top: 45vh;
+  left: 45vw;
+
+`;
 
 
 class ProfilePage extends React.Component{
@@ -17,56 +29,61 @@ class ProfilePage extends React.Component{
         super(props);
 
         this.state = {
-            projects: [],
-            searchField: ''
+            projects: null,
+            searchField: '',
+            userRef: 'init',
+            currentUser: 'init'
+
         }
     }
 
-    mapStateToProps = state => ({
-        userRef: state.userRef,
-        currentUser: state.currentUser
-
-      });
-
-
-    componentDidMount() {
-        /* get request to database for projects */
-
-        if (this.userRef){
-           this.userRef.collection("projects").get()
-           .then(querySnapshot => {
-            const oldprojects = this.state.projects;
-            querySnapshot.forEach( doc => {
-                const newproject = {
-                    name: doc.id,
-                    content: doc.data(),
-                }
-                oldprojects.push(newproject);
-
-            });
-            this.setState({
-                projects: oldprojects
-            }
-            );
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            userRef: nextProps.userRef,
+            currentUser: nextProps.currentUser
         });
+      }
 
-
+      componentWillMount(){
+        try {
+          this.setState({userRef: this.props.location.state.userRef, currentUser: this.props.location.state.currentUser});
+        } catch (error) {
+          console.log('New project');
         }
+      }
+
+
+    dbCall = () => {
+
+
+        if (this.props.userRef && this.props.userRef != 'init'){
+            this.props.userRef.collection("projects").get()
+            .then(querySnapshot => {
+                const oldprojects = (this.state.projects)?this.state.projects:[];
+
+             querySnapshot.forEach( doc => {
+                 const newproject = {
+                     name: doc.id,
+                     content: doc.data(),
+                 }
+                 oldprojects.push(newproject);
+
+             });
+             this.setState({
+                 projects: oldprojects
+             }
+             ,  console.log(this.props.projects));
+         });
+
+
+         }
     }
 
-    selectProject = (content, projectname) => { /* Pass props from selected project to playground */
-        this.props.history.push({
-            pathname: '/playground',
-            state: {
-                content: content,
-                projectname: projectname
-            }
-          })
-        }
+
 
     deleteProject = (project_name) => { /* Delete project */
-        if (this.userRef){
-        this.userRef.collection("projects").doc(project_name).delete()
+        if (this.props.userRef){
+        this.props.userRef.collection("projects").doc(project_name).delete()
         .then(()=> {
             let newprojects = this.state.projects;
             newprojects = newprojects.filter((project)=>(project.name != project_name));
@@ -83,65 +100,105 @@ class ProfilePage extends React.Component{
     }
 
 
+    componentDidUpdate(prevProps) {
+        if(prevProps.userRef != this.props.userRef){
+            this.dbCall();
+        }
+    }
+
+
+
     render(){
-        let display = ''
-        let id = ''
-        if (this.currentUser){
-            display = this.currentUser.displayName;
+        let projectsload;
+        let filteredProjects ;
+        let display = '';
+        let id = '';
+
+        if (this.state.currentUser && this.state.projects){
+            display = this.props.currentUser.displayName;
             id = this.props.currentUser.id;
+            filteredProjects = this.state.projects.filter(project =>
+            project.name.toLowerCase().includes(this.state.searchField.toLowerCase()));
+
         }
 
 
-        console.log(display);
-        const { projects, searchField } = this.state;
-        const filteredProjects = projects.filter(project =>
-            project.name.toLowerCase().includes(searchField.toLowerCase()));
-            console.log(projects);
+        if (!this.state.projects || !this.state.userRef == 'init') {
+            projectsload = <div className="loading-page"><PropagateLoader
+            css={override}
+            className="loader"
+            size={20}
+            color={"#38B7E0"}
+            loading={true}
+          /></div>
+        } else if (this.state.projects.length == 0) {
+            projectsload = <span className="no-project-text">You have no projects</span>
+        }
+
+        else {
+
+            projectsload = <div>
+            <ProjectList deleteProject={this.deleteProject} projects={filteredProjects}/>
+            </div>
+        }
+
+
+
+
+
         return(
+
 
         <div className="profilepage">
             <HomeNav className="home-nav"/>
 
-            <Jumbotron className="display-name">
+            <div className="display-name">
             <img className="user-character" alt="usericon" src={Boy}></img>
             <div className="profile-title">
-            <h2>{display}</h2>
-            Update your projects or create a new one!
+
+            <div className="name-text">
+            <h2 className="name">{display}</h2>
+
+            <span className="update-text">Update your projects or create a new one</span>
             </div>
-            <button className=" new-project-button" onClick={()=> this.props.history.push('/playground')}><span id="plus">+</span></button>
-            </Jumbotron>
+            </div>
+
+            </div>
+            <button className="new-project-button" onClick={()=> this.props.history.push('/playground')}>Create a New Project</button>
+            <hr className="profile-hr"></hr>
             <div className="search-nav">
                <span id="search-nav-title">Projects</span>
             <SearchBox id="search-box-nav" handleChange={this.handleSearch}/>
              </div>
-            <Jumbotron fluid className="profile-projects">
-                        <Container>
-
-            {
-                projects.length == 0?(
-
-                            <span className="no-project-text">You have no projects</span>
+            <div className="profile-projects">
 
 
-            ):
-            (
-                <div>
+                        {projectsload}
 
-                <ProjectList deleteProject={this.deleteProject} selectProject={this.selectProject} projects={filteredProjects}/>
-                </div>
-            )
-            }
+            </div>
 
 
-                        </Container>
-                        </Jumbotron>
 
-
+            <Footer position="home-footer"/>
 
         </div>
+
+
     );
 }
 
 }
 
-export default withRouter(ProfilePage);
+const mapStateToProps = function(state){
+
+
+    return {
+    userRef: state.userRef,
+    currentUser: state.currentUser
+
+  }};
+
+
+
+
+export default connect(mapStateToProps)(ProfilePage);

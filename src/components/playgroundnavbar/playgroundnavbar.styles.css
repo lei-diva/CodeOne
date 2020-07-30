@@ -67,11 +67,11 @@
 
 
     .nav-link{
-        width: 100%;
+        width: 100vw;
     }
 
     .nav-link:hover {
-        background-color: rgb(198, 226, 255, 50%);
+        background-color: rgb(237, 236, 236);
 
 
     }

@@ -2,7 +2,7 @@
 
 
 .export-button:hover {
-    transform: scale(1.10);
+    transform: scale(1.01);
 
 }
 
@@ -21,7 +21,7 @@
 
 
 @media (max-width: 991px){
-    .export-button, .tooltip, .save_button{
+    .export-button, .tooltips, .save_button{
         display: none !important;
     }
 

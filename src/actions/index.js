@@ -42,3 +42,11 @@ export const content = (panel, text) => (
         content: text
     }
 )
+
+export const selectProject = (projectname, content) => (
+    {
+        type: 'SELECT_PROJECT',
+        projectname: projectname,
+        content: content
+    }
+)

@@ -7,10 +7,10 @@ import Github from '../../images/github.png'
 import LinkedIn from '../../images/linkedin.png'
 import Email from '../../images/email-white.png'
 
-export const Footer = () => (
+export const Footer = (props) => (
 
     <Row>
-    <footer className="footer">
+    <footer className={`footer ${props.position}`}>
         <Row>
     <Col>
     <div>

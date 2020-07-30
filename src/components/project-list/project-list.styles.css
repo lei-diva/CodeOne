@@ -1,41 +1,118 @@
 .project-list {
     position: relative;
-    width: 80vw;
-    margin: 0;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 0px 10px;
-    left: 5px;
-    bottom: 70px;
+    grid-gap: 50px 20px;
+
   }
 
   .delete-button {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1.5px solid white;
     padding: 0;
-    background-color: rgb(83, 163, 232);
-    color: white;
-    position: relative;
-    top: 32px;
-    z-index: 20;
-    left: 60px;
+    border: 2px solid rgb(83, 163, 232);
 
+    color: rgb(83, 163, 232);
+    position: absolute;
+    background-color: white;
+    z-index: 20;
+    top: -10px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 15.8px 33.4px rgba(0, 0, 0, 0.086);
+    right: -10px;
   }
 
   #subtract {
     position: relative;
-    bottom: 12px;
+    bottom: 14px;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: 'Mulish', sans-serif;
   }
 
   .delete-button:focus{
     outline: none;
-    box-shadow: none;
+
   }
 
   .delete-button:hover{
     outline: none;
-    box-shadow: none;
-    transform: scale(1.10);
+
+    transform: scale(1.05);
   }
+
+
+
+  @media (max-width: 1200px) {
+    .project-list {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+    }
+  }
+
+  @media (max-width: 992px) {
+    .project-list{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+
+
+  @media (max-width: 767px) {
+    .project-list{
+      grid-template-columns: 1fr 1fr;
+
+    }
+
+
+
+    .search {
+      right: 0;
+      width: 300px !important;
+    }
+
+    .container {
+      width: auto;
+    }
+
+
+  }
+
+  @media (max-width: 692px) {
+    .search-nav {
+
+    }
+
+    #search-nav-title {
+      padding-left: 0px !important;
+    }
+
+    .search{
+      right: 0px !important;
+      width: 50vw !important;
+    }
+
+  }
+
+  @media (max-width: 490px) {
+    .container {
+      width: 85%;
+    padding-left: 0;
+    padding-right: 0;
+    margin:auto;
+    }
+
+    .project-container {
+      width: 150px;
+      height: 205px;
+    }
+
+    #search-nav-title{
+      font-size: 25px;
+    }
+
+  }
+
+

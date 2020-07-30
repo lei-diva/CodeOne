@@ -3,7 +3,7 @@
     position: absolute;
     width:100vw;
 
-    background: linear-gradient(to right,rgb(31, 114, 215),rgb(44, 189, 199));
+    background: linear-gradient(to bottom right,rgb(31, 114, 215),rgb(44, 189, 199));
     bottom: 0;
     padding-left: 12vw;
     padding-right: 12vw;
@@ -11,6 +11,10 @@
     font-family: 'Raleway', sans-serif;
   }
 
+  .home-footer{
+    position: relative;
+    width:100%;
+  }
 
 .footer_open_tag {
     font-family: 'Poppins', sans-serif;

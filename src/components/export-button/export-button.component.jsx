@@ -20,7 +20,7 @@ const ExportButton =() => {
 
       <OverlayTrigger
       placement='bottom'
-      className="tooltip"
+      className="tooltips"
         overlay={
           <Tooltip>
             Export

@@ -9,7 +9,7 @@
 
 
 .save_button:hover {
-    transform: scale(1.10);
+    transform: scale(1.01);
 
 }
 
@@ -25,4 +25,17 @@
     .save-text{
         margin-top: -10px !important;
     }
+}
+
+
+#missingName {
+    display:none;
+}
+
+#success {
+    display:none;
+}
+
+.toast {
+    display:none;
 }

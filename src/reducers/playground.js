@@ -33,6 +33,12 @@ const playgroundReducer = createReducer(playground, {
     },
     UPDATE_CONTENT: (state, action) => {
         state.panels[action.panel].content = action.content;
+    },
+    SELECT_PROJECT: (state, action) => {
+        state.projectname = action.projectname;
+        state.panels.Html.content = action.content.Html;
+        state.panels.Js.content = action.content.Js;
+        state.panels.Css.content = action.content.Css;
     }
 })
 

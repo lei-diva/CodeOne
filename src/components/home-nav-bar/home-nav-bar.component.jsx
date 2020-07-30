@@ -25,10 +25,11 @@ export const HomeNav = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto home-display">
 
-                <Nav.Link href="#top" className="home-link">Home</Nav.Link>
-                <Nav.Link href="#blog" className="home-link">Blog</Nav.Link>
-                <Nav.Link href="#about" className="home-link">About</Nav.Link>
-                <Nav.Link href="#contact" className="home-link">Contact</Nav.Link>
+                <Nav.Link href="/#top" className="home-link">Home</Nav.Link>
+                <Nav.Link href="/#features" className="home-link">Features</Nav.Link>
+                <Nav.Link href="/#blog-section" className="home-link">Blog</Nav.Link>
+
+                <Nav.Link href="/#contact" className="home-link">Contact</Nav.Link>
             </Nav>
 
             <hr className="menu-hr"></hr>

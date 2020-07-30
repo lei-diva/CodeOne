@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Container, Row, Col, Navbar, Nav, Carousel, Jumbotron} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import './Home.css'
@@ -12,31 +12,38 @@ import {PlayButton} from '../../components/home-logo/home-logo.component';
 import Scrollspy from 'react-scrollspy';
 import {HomeLogo} from '../../components/home-logo/home-logo.component';
 import {Footer} from '../../components/footer/footer.component';
-import {Next} from '../../images/right.png';
+import Blue from '../../images/blue.jpg';
+import projectnamevid from '../../images/projectname.mov';
+import First1 from '../../images/second-slide.png';
+import Next from '../../images/next.png';
+import {useSelector} from 'react-redux';
 
 
-class Home extends React.Component{
-    constructor (props) {
-        super(props);
-        this.state={
-            homedisplay:SignIn
+export const Home = () => {
+
+
+
+    const currentUser = useSelector(state=>state.currentUser);
+
+    useEffect(() => {
+        document.getElementById('myVideo').play();
+      });
+
+
+
+
+
+
+        let getStartedRoute = "/playground";
+
+        if (currentUser && currentUser != "init") {
+            getStartedRoute = "/profile";
         }
-    }
 
 
 
-     handleSelect = (selectedIndex, e) => {
-        if (selectedIndex == 2) {
-            this.props.history.push('/playground');
-        }
-      };
 
-    updateHomeDisplay = (dis) => {
-        this.setState({homedisplay:dis});
-    }
 
-    render() {
-        const HomeDisplay = this.state.homedisplay;
 
         return (
             <div className="home">
@@ -50,7 +57,7 @@ class Home extends React.Component{
                 <div class="clear"></div>
 
             <div className="subtitle">Develop with HTML, CSS, and Javascript in your own virutal playground!</div>
-            <a className="get-started" href="/playground"><button className="home-button">GET STARTED</button></a>
+            <a className="get-started" href={getStartedRoute}><button className="home-button">GET STARTED</button></a>
 
             </div>
             <div>
@@ -58,42 +65,88 @@ class Home extends React.Component{
             </div>
 
             </section>
-            <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
-                <path fill="white" fill-opacity="0.9" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+            <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+                <path fill="white" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
             </svg>
 
             <div className="signin-home">
-                <section id="login-section">
-                <div className="medium-blog">
-                <blockquote className="embedly-card"><h4><a href="https://medium.com/@divaaleii/the-story-behind-code-one-c9dafd2efb69">The Story Behind Code One</a></h4><p>Code One is a project that helps front end developers better visualize and access their projects. I created Code One to offer functionality to other web developers like myself. This web application was intended to optimize and simplify front end development by providing immediate visual feedback along with other useful tools.</p></blockquote>
+            <section id="features">
+
+                <h1 className="home-subtitle">Features</h1>
+            <Carousel >
+                <Carousel.Item>
+                            <video className="videos" autoplay muted loop id="myVideo" src={projectnamevid}></video>
+
+
+            </Carousel.Item>
+
+            <Carousel.Item>
+
+            <video className="videos" autoplay muted loop id="myVideo" src={projectnamevid}></video>
+
+
+            </Carousel.Item>
+
+            <Carousel.Item>
+            <video className="videos" autoplay muted loop id="myVideo" src={projectnamevid}></video>
+            </Carousel.Item>
+        </Carousel>
+
+            </section>
+
+                <section id="blog-section">
+
+                <h1 className="blog-subtitle home-subtitle">Blog</h1>
+                <br/>
+                <br/>
+               <div className="medium-blog">
+                {/*}<blockquote className="embedly-card"><h4><a href="https://medium.com/@divaaleii/the-story-behind-code-one-c9dafd2efb69">The Story Behind Code One</a></h4><p>Code One is a project that helps front end developers better visualize and access their projects. I created Code One to offer functionality to other web developers like myself. This web application was intended to optimize and simplify front end development by providing immediate visual feedback along with other useful tools.</p></blockquote>
+                {*/}
+                <img className="blog-photo" src={Blue}/>
+                <h2>The Production of Code One</h2>
+                <p>Code One is a project that helps front end developers better visualize and access their projects. I created Code One to offer functionality to other web developers like myself.
+                    This web application was intended to optimize and simplify front end development by providing immediate visual feedback along with other useful tools.
+                     My main focus was to create a functional and easy-to-use web application. Code One was created over the course of two weeks and was created with React Js.
+                </p>
+                <p>Just a few weeks ago, I decided I wanted to steer my software engineering career towards the specialty of web development. I developed an interest and curiosity for ReactJs,
+                    and the best way to learn it was the build with it. During my journey in becoming a developer, I was caught in many inefficient habits of development, the main one being the
+                    constant refreshing of the browser. This problem further inspired the creation of Code One.</p>
+                    <br/>
+             {/*}
+                <h3>Technologies</h3>
+                <p>
+                    Code one is hosted on Heroku. The entire application was created using the React Js library. Routing was implemented using React Router Dom and user authentication/storage was
+                    done with FireBase.</p>
+                <h3>Features</h3>
+                <p>The main feature of Code One is the Playground. The playground allows the user to write HTML, CSS, and JS code as a live browser updates itself.
+                Export — The user can change file names and export files onto their device. Save — If logged in, the user can save projects to their account and access it later
+                </p>
+            {*/}
                 </div>
 
 
+
                 </section>
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-  <path fill="white" fill-opacity="0.9" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-</svg>
-                <section id="blog">
 
 
 
-            </section>
-            <br/>
-            <hr/>
-            <section id="about">
 
 
-            </section>
-            <br/>
-            <hr/>
+
+
             <section id="contact">
+                    <h1 className="home-subtitle">Contact Me</h1>
+                    <div className="contact-form">
+                {/*}<blockquote className="embedly-card"><h4><a href="https://medium.com/@divaaleii/the-story-behind-code-one-c9dafd2efb69">The Story Behind Code One</a></h4><p>Code One is a project that helps front end developers better visualize and access their projects. I created Code One to offer functionality to other web developers like myself. This web application was intended to optimize and simplify front end development by providing immediate visual feedback along with other useful tools.</p></blockquote>
+                {*/}
+                    </div>
 
             </section>
             </div>
             </div>
-
+            <Footer position="home-footer"/>
             </div>);
-    }
+
 }
 
 export default withRouter(Home);
@@ -141,6 +194,10 @@ export default withRouter(Home);
  <Carousel.Item>
  </Carousel.Item>
 </Carousel>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="white" fill-opacity="0.9" d="M0,128L80,138.7C160,149,320,171,480,149.3C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+</svg>
+
 
      <Col className="about-right" sm={8}>
 

@@ -10,6 +10,7 @@ import {SignUpPage} from './pages/SignUp/SignUp';
 import ProfilePage from './pages/Profile/Profile';
 import {useDispatch, useSelector} from 'react-redux';
 import {currentUser, userRef} from './actions';
+import { HomeNav } from './components/home-nav-bar/home-nav-bar.component';
 
 const App = () => {
     let unsubscribeFromAuth = null;
@@ -45,13 +46,15 @@ const App = () => {
         return (
 
         <Router>
+
             <Switch>
+
         <Route exact path='/playground' component={Playground}/>
             {/*<Route exact path='/' component={() => <Home currentUser={currentUserState}/>} />*/}
             <Route exact path='/' component={Home} />
             <Route exact path='/home' component={Home} />
             <Route exact path='/sign-up' component={SignUpPage} />
-            <Route exact path='/profile' component={() => <ProfilePage currentUser={currentUserState} userRef={userRefState}/>} />
+            <Route exact path='/profile' component={ProfilePage} />
             </Switch>
         </Router>
 

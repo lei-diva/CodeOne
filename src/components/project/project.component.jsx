@@ -1,8 +1,13 @@
 import React from 'react';
 import './project.styles.css';
+import ProjectIcon from '../../images/project.png';
+import {useDispatch} from 'react-redux';
+import {selectProject} from '../../actions';
+import {withRouter, Link} from 'react-router-dom';
 
-export const Project = (props) => {
 
+const Project = (props) => {
+    const dispatch = useDispatch();
     const htmlcontent = props.project.content.Html;
     const csscontent = props.project.content.Css;
     const src = `<html><head><style type="text/css">${csscontent}</style></head><body>${htmlcontent}</body></html`;
@@ -11,8 +16,8 @@ export const Project = (props) => {
     var ds = d.toLocaleString();
     console.log(ds);
     return (
-    <div className="project-container" onClick={(e)=>{props.selectProject(props.project.content, props.project.name)}}>
-
+    <div className="project-container" onClick={(e)=> {dispatch(selectProject(props.project.name, props.project.content)); props.history.push('playground'); }}>
+        <button className="delete-button" onClick={(e) => {props.deleteProject(props.project.name)}}><span id="subtract">x</span></button>
         <p className="project-title">{props.project.name}</p>
         <iframe id="preview" srcDoc={src}></iframe>
 
@@ -22,3 +27,5 @@ export const Project = (props) => {
     </div>
 );
 }
+
+export default withRouter(Project);

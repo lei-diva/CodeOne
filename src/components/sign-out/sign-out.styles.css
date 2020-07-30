@@ -182,3 +182,7 @@
     width: 450px !important;
 
 }
+
+.modal-dialog {
+    margin: auto !important;
+}

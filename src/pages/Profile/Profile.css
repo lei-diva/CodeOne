@@ -1,16 +1,10 @@
-.home-button.new-project-button{
-    float: right !important;
 
-}
 
 .profilepage{
-    height: 100vh;
-    background: linear-gradient(
-        to top,
-        rgb(83, 163, 232) 0%,
-        rgb(228, 248, 248) 100%
-      );
-      overflow-y:scroll ;
+    width: 100vw;
+    overflow-x:hidden;
+
+
 
 }
 .home-nav{
@@ -18,26 +12,66 @@
     z-index: 50;
 }
 
-.profile-projects{
-    background-color: rgba(192, 191, 192, 0.25);
-    font-weight: 200;
-    font-size: 30px;
-    width: 80vw;
-    left: -121px;
-    text-align: center;
-    margin:auto;
+.new-project-button{
+    width: 500px;
     position: relative;
-    border-radius: 0 0 10px 10px;
-    height: 500px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    top: 118px;
-    margin-bottom: 100px;
+    margin: auto;
+    border-radius: 5px;
+
+    height: 40px;
+    font-weight: 200;
+    border: none;
+    display: block;
+    background: linear-gradient(to right,rgb(54, 125, 213),rgb(44, 165, 199));
+    color: white;
+    font-size: 20px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 15.8px 33.4px rgba(0, 0, 0, 0.086)
+  ;
 }
 
-.profile-projects:hover {
-    background-color: rgba(255, 255, 255, 0.25);
+.new-project-button:hover {
+    transform: scale(1.01);
 }
+
+.new-project-button:focus {
+    border: none;
+    outline: none;
+}
+
+.profile-projects{
+    font-weight: 200;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    padding-bottom: 60px;
+    height: auto;
+    min-height: 550px;
+
+
+}
+
+.loader {
+    position: relative;
+
+    left: 48vw !important;
+}
+
+.loading-page{
+    position: absolute;
+    background-color: transparent;
+    height:50vh;
+    width: 100vw;
+    top: -10rem;
+    overflow: hidden;
+    z-index: 100;
+}
+
 
 .no-project-text{
     position: relative;
@@ -46,45 +80,44 @@
 
 }
 
+
+.profile-hr {
+
+  margin-top: 2rem;
+}
 .display-name{
-    background-color: rgba(255, 255, 255, 0.3);
-    height: 200px !important;
+    background: linear-gradient(to right,rgb(31, 114, 215),rgb(44, 189, 199));
+    height: 210px;
     width: 100%;
     position: relative;
     font-weight: 200;
     font-size: 30px;
     float: left;
-    color:rgb(63, 63, 63);
+    color:rgb(255, 255, 255);
     top: 50px;
+    margin-bottom: 5rem;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 15.8px 33.4px rgba(0, 0, 0, 0.086)
+  ;
 }
 .user-character {
-    position: relative;
-    float: left;
-    border: 2px solid rgb(58, 58, 58);
+
+    border: 2px solid rgb(254, 254, 254);
     border-radius: 80px;
     bottom: 40px;
-    margin-right: 50px;
-    margin-left: 130px;
+    margin-right: 3vw;
+    margin-left: 10vw;
     width: 150px;
     height: 150px;
+    margin-top: 20px;
+
 }
 
 
-.new-project-button{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: transparent;
-    border:2px solid rgb(83, 163, 232);
-    color: rgb(83, 163, 232);
-    float: right;
-    position: relative;
-    font-size: 70px;
-    font-weight: 200;
-    bottom: 95px;
-    right: 160px;
-    z-index: 40;
-}
 
 #plus {
     position: relative;
@@ -92,32 +125,27 @@
 
 }
 
-.new-project-button:hover , .new-project-button:hover {
-    color: white;
-    background-color: rgb(83, 163, 232);
-    border:2px solid rgb(83, 163, 232);
-    outline: none;
-    box-shadow: none;
+.name-text {
+    margin-top: 50px;
+    margin-left: 50px;
 }
 
 .search-nav {
-    background-color: rgba(255, 255, 255, 0.534);
-    width: 80vw;
-    position: relative;
-    top: 300px;
-    margin: auto;
-    height: 50px;
-    border-radius: 10px 10px 0px 0px;
-    z-index: 40;
+
+       width: 80vw;
+       position: relative;
+       margin: 30px auto 50px auto;
+       height: 50px;
+
 }
 
 #search-nav-title {
-    float: left;
+
     position: relative;
     font-size: 30px;
-    left: 30px;
-    bottom: 230px;
     font-weight: 200;
+    padding-left: 30px;
+
 }
 
 .profile-title {
@@ -130,3 +158,73 @@ h2{
     font-weight: 600;
     font-family: 'Raleway', sans-serif;
 }
+
+@media(min-width:992px) {
+    .user-character{
+        float:left;
+    }
+}
+@media (max-width:991px) {
+
+    .user-character {
+        margin: 15px auto 0 auto ;
+        display:block;
+
+
+    }
+
+    .display-name{
+        height: 280px;
+        text-align: center;
+    }
+    .name-text {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
+}
+
+
+    @media (max-width: 600px) {
+        .display-name{
+            height: 250px;
+        }
+        .user-character {
+            width: 130px;
+            height: 130px;
+        }
+
+
+
+        .name{
+            font-size: 25px;
+            margin-bottom: 0px;
+        }
+
+        .update-text {
+            font-size: 20px;
+        }
+
+        .new-project-button{
+            width: 85vw;
+        }
+    }
+
+    @media (max-width: 350px) {
+
+        .user-character {
+            width: 120px;
+            height: 120px;
+        }
+        .update-text {
+            font-size: 16px;
+        }
+        .name{
+            font-size: 20px;
+            margin-bottom: -5px;
+        }
+        .display-name {
+            height: 230px;
+        }
+
+    }
