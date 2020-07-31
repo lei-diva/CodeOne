@@ -436,7 +436,8 @@
     height: 60px;
     margin: 20px auto;
     color: white;
-    background: linear-gradient(to right,rgb(31, 114, 215),rgb(45, 136, 215));
+    background: linear-gradient(to right,rgb(72, 142, 228),rgb(85, 162, 228));
+
     margin-top: 50px;
     font-family: 'Quicksand', sans-serif;
     border: none;
@@ -452,7 +453,7 @@
 
 
 .get-started:hover {
-    background: linear-gradient(to right,rgb(72, 142, 228),rgb(85, 162, 228));
+    background: linear-gradient(to right,rgb(31, 114, 215),rgb(45, 136, 215));
 
 
 
