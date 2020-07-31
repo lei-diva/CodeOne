@@ -1,12 +1,14 @@
 .home {
-    background-image: url(../../images/background-blue.jpg);
-
+    /*background-image: url(../../images/background-blue.jpg);
     background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center center;
-    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;*/
+    background: linear-gradient(to right,rgb(31, 114, 215),rgb(44, 189, 199));
     overflow-x: hidden;
+
 }
+
+
 
 .signin-home{
 
@@ -149,8 +151,8 @@
 }
 
 .intro-text {
-    background: linear-gradient(to bottom right ,rgb(44, 189, 199, 90%), rgba(43, 127, 228, 0.9));
-
+    /*background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(112, 164, 227, 0.9));*/
+    background-color:white;
     width: 550px;
     border-radius: 7px;
     position: relative;
@@ -382,7 +384,7 @@
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
     position: relative;
-    color:rgb(255, 255, 255);
+    color: rgb(45, 136, 215);
     margin: 30px auto;
     width: 320px;
 }
@@ -407,10 +409,10 @@
 
 
 .subtitle {
-    color: rgb(255, 255, 255);
+    color: rgb(45, 136, 215);
     position: relative;
     font-size: 25px;
-    font-weight: 400;
+
     margin: auto;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
@@ -425,7 +427,7 @@
 
 
 
-.home-button {
+.home-button{
     display: block;
     font-weight: 500;
     font-size: 23px;
@@ -433,19 +435,25 @@
     text-align:center;
     height: 60px;
     margin: 20px auto;
-    color: rgb(75, 168, 201);
-
-    background-color: white;
+    color: white;
+    background: linear-gradient(to right,rgb(31, 114, 215),rgb(45, 136, 215));
     margin-top: 50px;
     font-family: 'Quicksand', sans-serif;
     border: none;
     border-radius: 5px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 15.8px 33.4px rgba(0, 0, 0, 0.086)
+  ;
 }
 
 
-.home-button:hover {
+.get-started:hover {
+    background: linear-gradient(to right,rgb(72, 142, 228),rgb(85, 162, 228));
 
-background-color: rgb(255,255,255, 90%);
 
 
 }

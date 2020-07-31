@@ -47,6 +47,7 @@ export const Home = () => {
 
         return (
             <div className="home">
+
                     <HomeNav/>
             <div className="content">
             <section id="intro">
@@ -57,7 +58,7 @@ export const Home = () => {
                 <div class="clear"></div>
 
             <div className="subtitle">Develop with HTML, CSS, and Javascript in your own virutal playground!</div>
-            <a className="get-started" href={getStartedRoute}><button className="home-button">GET STARTED</button></a>
+            <a className="get-started" href={getStartedRoute}><button className="home-button get-started">GET STARTED</button></a>
 
             </div>
             <div>

@@ -4,7 +4,7 @@
     position: relative;
     width: 450px;
     min-height: 600px;
-    background: linear-gradient(to bottom right ,rgb(44, 189, 199), rgba(43, 127, 228));
+    background: linear-gradient(to bottom right ,rgb(44, 114, 199), rgb(43, 173, 228));
 
 
 }
@@ -31,15 +31,15 @@
     width: 270px;
     background: transparent;
     height: 50px;
-    border: 1px solid #fff;
-    font-weight: 200;
+    border: 2px solid #fff;
+
 
 
 }
 
 .home-button.sign-in-button:hover {
-    color: rgb(44, 189, 199);
-    background-color: transparent;
+
+    background-color: transparent !important;
 }
 
 .home-button.sign-in-button.google{

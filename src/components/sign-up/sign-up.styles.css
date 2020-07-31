@@ -1,7 +1,7 @@
 .sign-in.sign-up {
 
   border-radius: 10px;
-  background: linear-gradient(to bottom right ,rgb(44, 189, 199), rgba(43, 127, 228));
+  background: linear-gradient(to bottom right ,rgb(44, 114, 199), rgb(43, 173, 228));
   margin:auto;
   width: 450px;
   position: relative;
@@ -36,7 +36,7 @@
   background-color: white;
   color: rgba(94, 163, 224);
   border: 1px solid rgba(94, 163, 224);
-  background-color:white;
+  background-color:white !important;
   color: #5ea3e0;
   width: 270px;
 
@@ -46,7 +46,6 @@
 .home-button.sign-up-button:hover{
   background-color:#5ea3e0;
   color: white;
-  border: 1px solid white;
 }
 
 
