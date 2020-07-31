@@ -2,7 +2,7 @@
 .home_open_tag {
     font-family: 'Poppins', sans-serif;
     font-size:50px;
-    color: rgb(45, 136, 215);
+    color: rgb(89, 89, 89);
     position: relative;
 
 
@@ -13,7 +13,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
     position: relative;
-    color: rgb(45, 136, 215);
+    color: rgb(89, 89, 89);
 
 
 }
@@ -21,7 +21,7 @@
 .home_close_tag {
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
-    color: rgb(45, 136, 215);
+    color: rgb(89, 89, 89);
     position: relative;
 
 
