@@ -36,6 +36,9 @@
     display:none;
 }
 
-.toast {
-    display:none;
+
+
+.toast.show{
+    height: 38px;
+    margin: auto;
 }

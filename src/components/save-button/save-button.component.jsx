@@ -58,7 +58,7 @@ export const SaveButton = () => {
             <span className="display-button text">Save</span>
         </Nav.Link>
         </OverlayTrigger>
-        <Toast show={nameError} onClose={togglenameError}>
+        <Toast show={nameError} onClose={togglenameError} delay={5000} autohide>
           <Toast.Header>
             <strong className="mr-auto">Missing Project Title</strong>
           </Toast.Header>
@@ -72,7 +72,7 @@ export const SaveButton = () => {
 
         </Toast>
 
-        <Toast show={errorMsg} onClose={toggleErrorMsg}>
+        <Toast show={errorMsg} onClose={toggleErrorMsg} delay={5000} autohide>
           <Toast.Header>
             <strong className="mr-auto">Error! Please try again later.</strong>
           </Toast.Header>
