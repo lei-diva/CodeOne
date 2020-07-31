@@ -4,15 +4,15 @@
     position: relative;
     width: 450px;
     min-height: 600px;
-    background: linear-gradient(to bottom right ,rgb(44, 114, 199), rgb(43, 173, 228));
+    background: rgb(244,244,244);
 
 
 }
 
 .sign-in-title {
     font-size: 30px;
-    font-family: 'Quicksand', sans-serif;
-    color: white;
+    font-weight: 200;
+    color: rgb(68,68,68);
     position: relative;
     top: 80px;
     text-align: center;
@@ -20,18 +20,18 @@
 }
 
 .home-button.sign-in-button{
-    font-family: 'Quicksand', sans-serif;
+
     position: relative;
     top: 130px;
     margin: 20px auto;
     margin-top: 30px;
-    border-radius: 5px;
+
     color: white;
-    font-weight: 500;
+    font-weight: 300;
     width: 270px;
-    background: transparent;
+    background: rgb(49, 144, 194);
     height: 50px;
-    border: 2px solid #fff;
+    border-radius:0;
 
 
 
@@ -39,7 +39,8 @@
 
 .home-button.sign-in-button:hover {
 
-    background-color: transparent !important;
+    background: rgb(58, 165, 223)!important;
+    color:white !important;
 }
 
 .home-button.sign-in-button.google{
@@ -66,15 +67,20 @@
     position: absolute;
     bottom: 40px;
     font-size: 20px;
-    color:white;
+color: rgb(84,84,84);
     text-align: center;
     width: 100%;
+    font-weight: 300;
 
 
 }
 
 .here{
     text-decoration: underline;
-
+    color: rgb(89, 146, 216);
     cursor: pointer;
+}
+
+.here:hover{
+    color: rgb(70, 117, 174);
 }

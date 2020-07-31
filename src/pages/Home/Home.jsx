@@ -17,6 +17,7 @@ import projectnamevid from '../../images/projectname.mov';
 import First1 from '../../images/second-slide.png';
 import Next from '../../images/next.png';
 import {useSelector} from 'react-redux';
+import AppIcon from '../../images/app.png';
 
 
 export const Home = () => {
@@ -61,6 +62,8 @@ export const Home = () => {
             <a className="get-started" href={getStartedRoute}><button className="home-button get-started">GET STARTED</button></a>
 
             </div>
+
+
             <div>
 
             </div>
