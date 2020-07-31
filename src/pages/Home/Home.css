@@ -11,7 +11,7 @@
 
     background:linear-gradient(rgb(255,255,255), rgb(255,255,255,0.9));
     position: relative;
-    top: 147px;
+
     overflow:hidden;
 }
 
@@ -75,13 +75,7 @@
 
 
 @media (min-height: 1023px) {
-    .signin-home {
-        top: -150px !important;
-    }
 
-    .wave {
-        bottom: 250px !important;
-    }
 
     .intro-text {
         margin: auto !important;
@@ -112,23 +106,15 @@
 }
 
 @media (max-width: 600px) {
-    .wave {
-        bottom: 0px !important;
-    }
 
     .signin-home {
-        top: 37px;
+        top: -1px;
     }
 }
 
 
 @media (max-width: 321px) {
-    .wave {
-        bottom: -100px !important;
-    }
-    .signin-home {
-        top: 134px !important;
-    }
+
 }
 
 
@@ -167,8 +153,7 @@
 }
 
 .wave{
-    position: absolute;
-    bottom:-100px;
+
 
 }
 
@@ -356,7 +341,7 @@
 #intro {
 
     margin-top: 50px;
-    height: 85vh;
+    min-height: 500px;
 
 
 }

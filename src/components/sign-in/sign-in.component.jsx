@@ -70,10 +70,10 @@ class SignIn extends React.Component {
                 </form>
                 <button className="home-button sign-in-button" onClick={this.handleSubmit}>Continue</button>
 
-                {/*}
+
                 <button className="home-button sign-in-button google" type="button" onClick={signInWithGoogle}>
                     Log in with Google
-        </button>{*/}
+        </button>
                 <p className="log-in-option">Dont have an account? <span className="here" onClick={()=> {this.props.hideLogIn();this.props.showSignUp()}}>Register here.</span></p>
             </div>
 

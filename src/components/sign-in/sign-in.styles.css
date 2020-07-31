@@ -3,7 +3,7 @@
 .sign-in {
     position: relative;
     width: 450px;
-    min-height: 600px;
+    min-height: 650px;
     background: rgb(244,244,244);
 
 
@@ -22,7 +22,7 @@
 .home-button.sign-in-button{
 
     position: relative;
-    top: 130px;
+    top: 150px;
     margin: 20px auto;
     margin-top: 30px;
 
@@ -44,16 +44,18 @@
 }
 
 .home-button.sign-in-button.google{
-    color: rgb(45, 153, 211) !important;
+    color: rgb(49, 144, 194) !important;
 
     height: 50px;
-    background: rgb(255, 255, 255);
+    background: rgba(250, 250, 250, 0.9) !important;
     font-size: 20px;
 
 
 }
 
-
+.home-button.sign-in-button.google:hover {
+    background: rgb(255, 255, 255) !important;
+}
 
 .pwd-icon {
     width: 45px;

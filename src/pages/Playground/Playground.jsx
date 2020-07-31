@@ -11,40 +11,6 @@ import {HomeNav} from '../../components/home-nav-bar/home-nav-bar.component';
 
 
 const Playground = () => {
-/*
-  componentWillMount(){
-    try { /
-      this.setState({content: this.props.location.state.content, projectname: this.props.location.state.projectname});
-    } catch (error) {
-      console.log('New project');
-    }
-
-  }
-  put in output.js
-  */
-
-  /* put in projectname.js
-  changeProjectName = (e) => {
-    this.setState({projectname: e.target.value}); /* Save project title name for export
-  }
-
-*/
-/*move to playground navbar
-  changeDisplay = (id, e) =>{
-    let display_status = this.state.display[id];
-    let display_copy = this.state.display;
-
-    if (display_status === "show") {
-      display_copy[id] = "hide";
-      this.setState({display: display_copy});
-    }
-    else {
-      display_copy[id] = "show";
-      this.setState({display: display_copy});
-    }
-  }
-
-  */
 
 
     return (
