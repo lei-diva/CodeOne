@@ -2,7 +2,7 @@
   "name": "vision_coder",
   "jest": {
     "verbose": true,
-    "testTimeout": 30000
+    "testTimeout": 40000
   },
   "version": "0.1.0",
   "private": true,
@@ -16,6 +16,7 @@
     "jquery": "^3.4.1",
     "node-sass": "^4.13.1",
     "puppeteer": "^5.2.1",
+    "puppeteer-firefox": "^0.5.1",
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.0",

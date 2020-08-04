@@ -20,7 +20,7 @@ afterEach(async () => {
   await browser.close();
 });
 
-test("Toggle HTML display Buttons", async () => {
+test("Toggle HTML display Button", async () => {
   await page.click(
     "#responsive-navbar-nav > div.mr-auto.display.navbar-nav > a:nth-child(1)"
   );
@@ -39,7 +39,7 @@ test("Toggle HTML display Buttons", async () => {
   expect(visible).toBeTruthy();
 });
 
-test("Toggle CSS display Buttons", async () => {
+test("Toggle CSS display Button", async () => {
   await page.click(
     "#responsive-navbar-nav > div.mr-auto.display.navbar-nav > a:nth-child(2)"
   );
@@ -55,7 +55,7 @@ test("Toggle CSS display Buttons", async () => {
   expect(visible).toBeTruthy();
 });
 
-test("Toggle JS display Buttons", async () => {
+test("Toggle JS display Button", async () => {
   await page.click(
     "#responsive-navbar-nav > div.mr-auto.display.navbar-nav > a:nth-child(3)"
   );
@@ -71,7 +71,7 @@ test("Toggle JS display Buttons", async () => {
   expect(visible).toBeTruthy();
 });
 
-test("Create Basic Project", async () => {
+test("Check if output updates to HTML,CSS, JSS content", async () => {
   await page.type(
     "#root > div > div > div.panels.row.no-gutters > div:nth-child(1) > textarea.codearea.form-control",
     "<p> Hello Testing </p>"
