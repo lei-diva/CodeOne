@@ -1,4 +1,4 @@
-![Code One](./src/images/app.png)
+![Code One](./src/images/coding.png)
 
 ## [Code One](https://codeone.herokuapp.com/) - https://codeone.herokuapp.com/
 
