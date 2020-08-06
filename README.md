@@ -11,7 +11,12 @@ This web application was intended to optimize and simplify front end development
 
 ## Installation
 
+### `git clone https://github.com/lei-diva/CodeOne.git`
+
 In the project directory, you can run:
+
+### `yarn`
+Initialize project
 
 ### `yarn start`
 
