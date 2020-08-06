@@ -2,7 +2,8 @@
 
 Design, build, and test your front end projects in our online playground.
 Develop with HTML, CSS, and JS and watch your projects come to life alongside your code!
-This web application was intended to optimize and simplify front end development by providing immediate visual feedback along with other useful tools. Code One was created over the course of two weeks and is my first React JS project.
+This web application was intended to optimize and simplify front end development by providing immediate visual feedback along with other useful tools. 
+
 
 This project was hosted on [Heroku](https://www.heroku.com/) and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -10,7 +11,7 @@ This project was hosted on [Heroku](https://www.heroku.com/) and bootstrapped wi
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -18,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
@@ -45,15 +46,15 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Usage
 
-![Code Alongside a Live Browser](./src/images/first-slide.png)
+![Code Alongside a Live Browser](./src/images/firstslide.png)
 
-![Export Files](./src/images/second-slide.png)
+![Export Files](./src/images/secondslide.png)
 
-![Save Projects](./src/images/third-slide.png)
+![Save Projects](./src/images/login-ss.png)
 
-![Access old Projects](./src/images/fourth-slide.png)
+![Access old Projects](./src/images/profile-ss.png)
 
-![Create New Projects](./src/images/fifth-slide.png)
+
 
 ## Contribution
 Project created by Diva Lei.
