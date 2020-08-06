@@ -1,11 +1,13 @@
+![Code One](./src/images/app.png)
+
 ## [Code One](https://codeone.herokuapp.com/)
 
-Design, build, and test your front end projects in our online playground.
+**Design, build, and test your front end projects in our online playground.
 Develop with HTML, CSS, and JS and watch your projects come to life alongside your code!
-This web application was intended to optimize and simplify front end development by providing immediate visual feedback along with other useful tools. 
+This web application was intended to optimize and simplify front end development by providing immediate visual feedback along with other useful tools.**
 
 
-This project was hosted on [Heroku](https://www.heroku.com/) and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**This project was hosted on [Heroku](https://www.heroku.com/) and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).**
 
 ## Installation
 
@@ -22,7 +24,7 @@ You will also see any lint errors in the console.
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+End-to-end tests are written with Puppeteer and Jest in [Tests](./tests)
 
 ### `npm run build`
 
@@ -45,14 +47,13 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Usage
-
 ![Code Alongside a Live Browser](./src/images/firstslide.png)
 
 ![Export Files](./src/images/secondslide.png)
 
-![Save Projects](./src/images/login-ss.png)
+![Login to account](./src/images/login-ss.png)
 
-![Access old Projects](./src/images/profile-ss.png)
+![Access saved Projects](./src/images/profile-ss.png)
 
 
 
