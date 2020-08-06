@@ -22,7 +22,7 @@ afterAll(async () => {
 });
 
 describe.each(viewportAndEmulation)(
-  "Chrome User Authentication tests with Screen Size Emulation",
+  "Firefox User Authentication tests with Screen Size Emulation",
   (name, viewportAndEmulationFunc, uuid) => {
     test(`${name} Get started as guest`, async () => {
       await viewportAndEmulationFunc(page, ppFirefox);

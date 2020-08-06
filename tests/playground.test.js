@@ -8,7 +8,7 @@ async function setLargerViewport() {
 }
 
 beforeEach(async () => {
-  browser = await puppeteer.launch({ headless: false });
+  browser = await puppeteer.launch();
   page = await browser.newPage();
 
   await page.goto("https://codeone.herokuapp.com/");
@@ -91,4 +91,9 @@ test("Check if output updates to HTML,CSS, JSS content", async () => {
 
   expect(html).toBe("<p>Hello World</p>");
   expect(css).toBe("p{color: red}");
+});
+
+test("assessibility", async () => {
+  const snapshot = await page.accessibility.snapshot();
+  console.info(snapshot);
 });
