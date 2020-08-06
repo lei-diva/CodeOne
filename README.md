@@ -1,6 +1,7 @@
+## [Code One](https://codeone.herokuapp.com/) - https://codeone.herokuapp.com/
+
 ![Code One](./src/images/coding.png)
 
-## [Code One](https://codeone.herokuapp.com/) - https://codeone.herokuapp.com/
 
 **Design, build, and test your front end projects in our online playground.
 Develop with HTML, CSS, and JS and watch your projects come to life alongside your code!
