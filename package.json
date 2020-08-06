@@ -1,8 +1,9 @@
 {
   "name": "vision_coder",
   "jest": {
-    "verbose": true,
-    "testTimeout": 40000
+    "testTimeout": 40000,
+    "collectCoverage": true,
+    "verbose": false
   },
   "version": "0.1.0",
   "private": true,
@@ -15,6 +16,7 @@
     "firebase": "^7.11.0",
     "jquery": "^3.4.1",
     "node-sass": "^4.13.1",
+    "nyc": "^15.1.0",
     "puppeteer": "^5.2.1",
     "puppeteer-firefox": "^0.5.1",
     "react": "^16.13.0",
@@ -34,8 +36,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
-    "eject": "react-scripts eject"
+    "test": "jest --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "test:coverage": "yarn test --coverage --watchAll=false"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,5 +55,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jest-puppeteer-istanbul": "^0.5.3"
+  }
 }
