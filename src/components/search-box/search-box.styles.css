@@ -1,6 +1,6 @@
 .search {
   -webkit-appearance: none;
-  border:2px solid rgb(83, 163, 232);
+  border: 2px solid rgb(83, 163, 232);
   outline: none;
   padding: 10px;
   float: right;
@@ -14,5 +14,3 @@
 
   font-weight: 200;
 }
-
-

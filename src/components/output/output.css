@@ -1,18 +1,17 @@
 .code-label.out-label {
-    padding-top: 5px !important;
-    background-color: rgb(54, 144, 164)!important;
-    border: 2px solid  rgb(54, 144, 164)!important;
-    color: rgb(255, 255, 255)!important;
-    cursor: default !important;
-    font-family: 'Quicksand', sans-serif !important;
-    font-weight: 500 !important;
-
+  padding-top: 5px !important;
+  background-color: rgb(54, 144, 164) !important;
+  border: 2px solid rgb(54, 144, 164) !important;
+  color: rgb(255, 255, 255) !important;
+  cursor: default !important;
+  font-family: "Quicksand", sans-serif !important;
+  font-weight: 500 !important;
 }
 
 .code-label.out-label:hover {
-    border: none !important;
+  border: none !important;
 }
 
 .code-label.out-label:focus {
-    border: none !important;
+  border: none !important;
 }

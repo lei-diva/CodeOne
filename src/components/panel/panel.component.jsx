@@ -5,7 +5,6 @@ import { Form, Col } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { content } from "../../actions";
 import { Filename } from "../filename/filename.component";
-import { nodeInternals } from "stack-utils";
 
 export const Panel = props => {
   const dispatch = useDispatch();

@@ -472,5 +472,3 @@ describe.each(viewportAndEmulation)(
     });
   }
 );
-
-module.exports = page;

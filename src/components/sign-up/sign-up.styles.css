@@ -1,33 +1,29 @@
 .sign-in.sign-up {
-
   border-radius: 10px;
-  background: rgb(244,244,244);
-  margin:auto;
+  background: rgb(244, 244, 244);
+  margin: auto;
   width: 450px;
   position: relative;
-
-
 }
 
 .sign-up-title {
   font-size: 30px;
   font-weight: 200;
 
-
-  color: rgb(68,68,68);
+  color: rgb(68, 68, 68);
   position: relative;
   top: 40px;
   text-align: center;
   padding: 0 50px;
 }
-.sign-up-form{
+.sign-up-form {
   position: relative;
   top: -70px;
   width: 100%;
 }
 
-.home-button.sign-up-button{
-  font-family: 'Quicksand', sans-serif;
+.home-button.sign-up-button {
+  font-family: "Quicksand", sans-serif;
   font-weight: 500;
   position: relative;
   top: 150px;
@@ -37,16 +33,12 @@
   background-color: white;
   color: rgba(94, 163, 224);
   border: 1px solid rgba(94, 163, 224);
-  background-color:white !important;
+  background-color: white !important;
   color: #5ea3e0;
   width: 270px;
-
 }
 
-
-.home-button.sign-up-button:hover{
-  background-color:#5ea3e0;
+.home-button.sign-up-button:hover {
+  background-color: #5ea3e0;
   color: white;
 }
-
-

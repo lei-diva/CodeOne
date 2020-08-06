@@ -1,76 +1,65 @@
-
 .hide {
-    display: none;
+  display: none;
 }
 
-
-
 .codearea {
-    outline: none !important;
-    box-shadow: none !important;
-    padding: 5px 10px !important;
-    background-color: rgba(13, 17, 30, 0.954) !important;
-    font-weight: 500 !important;
-    flex-grow: 1;
-    height: 89.5vh !important;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 16px !important;
-    color:  white !important;
-    border-radius: 0px !important;
-
-
-
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 5px 10px !important;
+  background-color: rgba(13, 17, 30, 0.954) !important;
+  font-weight: 500 !important;
+  flex-grow: 1;
+  height: 89.5vh !important;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px !important;
+  color: white !important;
+  border-radius: 0px !important;
 }
 
 .codearea:focus {
-    border-top: none !important;
-    outline: none !important;
-    background-color: rgba(13, 17, 30, 0.99) !important;
-    border: 3px solid  white !important;
+  border-top: none !important;
+  outline: none !important;
+  background-color: rgba(13, 17, 30, 0.99) !important;
+  border: 3px solid white !important;
 
-
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .codearea:hover {
-
-    border: 3px solid white!important;
-    box-shadow: none !important;
+  border: 3px solid white !important;
+  box-shadow: none !important;
 }
 
-textarea{
-    resize: none !important;
+textarea {
+  resize: none !important;
 }
 
 .code-label {
-    height: 30px !important;
-    font-size: 15px !important;
-    text-align: center;
-    padding-top: 3px!important;
-    background-color: rgb(30, 102, 165)!important;
-    border: 2px solid rgb(30, 102, 165) !important;
-    border-right: 1px solid white !important;
+  height: 30px !important;
+  font-size: 15px !important;
+  text-align: center;
+  padding-top: 3px !important;
+  background-color: rgb(30, 102, 165) !important;
+  border: 2px solid rgb(30, 102, 165) !important;
+  border-right: 1px solid white !important;
 
-    position: relative;
-    outline: none !important;
-    color: white !important;
-    font-family: 'Quicksand', sans-serif !important;
-    font-weight: 500 !important;
-    overflow: hidden !important;
-
-
+  position: relative;
+  outline: none !important;
+  color: white !important;
+  font-family: "Quicksand", sans-serif !important;
+  font-weight: 500 !important;
+  overflow: hidden !important;
 }
 
 .code-label:focus {
-    outline: none !important;
-    border: none !important;
-    border: 2px solid rgb(247, 247, 247) !important;
-    box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+  border: 2px solid rgb(247, 247, 247) !important;
+  box-shadow: none !important;
 }
 
 .code-label:hover {
-
-    outline: none !important;
-    border: 2px solid white !important;
-    box-shadow: none !important;
+  outline: none !important;
+  border: 2px solid white !important;
+  box-shadow: none !important;
 }

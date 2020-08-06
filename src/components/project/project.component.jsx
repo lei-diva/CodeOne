@@ -1,6 +1,5 @@
 import React from "react";
 import "./project.styles.css";
-import ProjectIcon from "../../images/project.png";
 import { useDispatch } from "react-redux";
 import { selectProject } from "../../actions";
 import { withRouter, Link } from "react-router-dom";

@@ -1,69 +1,65 @@
-.profile-menu{
-    background: transparent !important;
-    outline: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    font-family: 'Raleway', sans-serif;
+.profile-menu {
+  background: transparent !important;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-family: "Raleway", sans-serif;
 }
 
 .dropdown-name {
-    font-size: 20px;
-    color: rgb(58, 58, 58) !important;
-    font-weight: 400;
-    margin-left: 20px;
-
-
+  font-size: 20px;
+  color: rgb(58, 58, 58) !important;
+  font-weight: 400;
+  margin-left: 20px;
 }
 
 .dropdown-item {
-    color: rgb(58, 58, 58) !important;
-    font-size: 16px !important;
-
+  color: rgb(58, 58, 58) !important;
+  font-size: 16px !important;
 }
-
 
 .dropdown-item:hover {
-    background-color: transparent !important;
-    color: rgb(0, 0, 0) !important;
+  background-color: transparent !important;
+  color: rgb(0, 0, 0) !important;
 }
 
-
 .dropdown-menu {
-    background-color: rgb(255, 255, 255) !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 
 .dropdown-menu:hover {
-    background-color: rgba(43, 127, 228, 1);
+  background-color: rgba(43, 127, 228, 1);
 }
 
 .dropdown-divider {
-    border-top: 1px solid rgb(30, 110, 154) !important;
+  border-top: 1px solid rgb(30, 110, 154) !important;
 }
 
-
 .profile-nav-home.location-home {
-    display: none;
+  display: none;
 }
 
 .profile-nav-playground.location-playground {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 991px) {
-    .profile-menu{
-        display: none !important;
-    }
-    .profile-drop-down {
-        display: none !important;
-    }
-    .dropdown, .dropleft, .dropright, .dropup {
-        display: none !important;
-    }
-
+  .profile-menu {
+    display: none !important;
+  }
+  .profile-drop-down {
+    display: none !important;
+  }
+  .dropdown,
+  .dropleft,
+  .dropright,
+  .dropup {
+    display: none !important;
+  }
 }
 
 @media (min-width: 992px) {
-    .text {
-        display: none !important;
-    }
+  .text {
+    display: none !important;
+  }
 }

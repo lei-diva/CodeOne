@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Carousel } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import "./Home.css";
 
 import { HomeNav } from "../../components/home-nav-bar/home-nav-bar.component";

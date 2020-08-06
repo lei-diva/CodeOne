@@ -1,133 +1,116 @@
 .navbar-brand {
-    display: inline-block;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    font-size: 1.25rem;
-    line-height: inherit;
-    white-space: nowrap;
+  display: inline-block;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
 }
-.nav-link{
-    margin:auto;
-    position: relative;
-    width: auto;
-    font-weight: 300;
-    font-family: 'Quicksand', sans-serif;
-
+.nav-link {
+  margin: auto;
+  position: relative;
+  width: auto;
+  font-weight: 300;
+  font-family: "Quicksand", sans-serif;
 }
 
 .navbar {
-    position: relative;
-    background: linear-gradient(to right,rgb(31, 114, 215),rgb(44, 189, 199));
-    background-color: rgb(83, 163, 232) !important;
+  position: relative;
+  background: linear-gradient(to right, rgb(31, 114, 215), rgb(44, 189, 199));
+  background-color: rgb(83, 163, 232) !important;
+  width: 100%;
+  padding: 0px 15px !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    margin-top: -10px;
+  }
+
+  .display {
+    width: 30rem;
+  }
+
+  .sign-out-display {
+    display: none !important;
+  }
+
+  .navbar {
+    height: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    z-index: 100;
+    text-align: center;
+    width: 100vw !important;
+    margin-left: -20px;
+    margin-right: -20px;
+    background: linear-gradient(to right, rgb(31, 114, 215), rgb(44, 189, 199));
+    border-bottom: 3px solid rgb(255, 255, 255);
+  }
+
+  .nav-link {
+    width: 100vw;
+  }
+
+  .nav-link:hover {
+    background-color: rgb(237, 236, 236);
+  }
+
+  .menu-hr {
     width: 100%;
-    padding: 0px 15px !important;
-
-
+  }
 }
-
-@media (min-width: 992px){
-    .navbar-expand-lg .navbar-collapse {
-        display: flex!important;
-        flex-basis: auto;
-        margin-top:-10px;
-
-    }
-
-
-    .display {
-        width: 30rem;
-
-    }
-
-    .sign-out-display{
-        display: none !important;
-
-    }
-
-    .navbar{
-        height: 50px;
-    }
-
-}
-
-@media (max-width: 991px){
-    .navbar-collapse {
-        flex-basis: 100%;
-        flex-grow: 1;
-        align-items: center;
-        z-index: 100;
-        text-align: center;
-        width:100vw !important;
-        margin-left:-20px;
-        margin-right: -20px;
-        background: linear-gradient(to right,rgb(31, 114, 215),rgb(44, 189, 199));
-        border-bottom: 3px solid rgb(255, 255, 255);
-
-    }
-
-
-    .nav-link{
-        width: 100vw;
-    }
-
-    .nav-link:hover {
-        background-color: rgb(237, 236, 236);
-
-
-    }
-
-    .menu-hr {
-        width: 100%;
-    }
-
-}
-
 
 .collapse:not(.show) {
-    display: none;
-    position: relative;
+  display: none;
+  position: relative;
 }
 
-.navbar-toggler  {
-
-    width: 47px;
-    padding: 0 !important;
-    font-size: 1.35rem !important;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    height: 36px !important;
+.navbar-toggler {
+  width: 47px;
+  padding: 0 !important;
+  font-size: 1.35rem !important;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  height: 36px !important;
 }
 
-.navbar-toggler:focus{
-    outline:none;
-    box-shadow:none;
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
 }
 
-
-.navbar-nav{
-    margin-top: 10px;
+.navbar-nav {
+  margin-top: 10px;
 }
 
-.profile-button{
-    display:inline-block;
-    font-size: 22px !important;
-    color: rgb(237, 237, 237) !important;
-    font-weight: 200 !important;
-    position: relative;
-    width:100px;
+.profile-button {
+  display: inline-block;
+  font-size: 22px !important;
+  color: rgb(237, 237, 237) !important;
+  font-weight: 200 !important;
+  position: relative;
+  width: 100px;
 }
 
-.profile-button:hover{
-    color:white !important;
+.profile-button:hover {
+  color: white !important;
 }
-
 
 .toggle-icon {
-    border: 2px solid rgb(255,255,255,50%)!important;
-    color: white;
+  border: 2px solid rgb(255, 255, 255, 50%) !important;
+  color: white;
 }
 
 .toggle-icon:hover {
-    border: 2px solid rgb(255,255,255)!important;
+  border: 2px solid rgb(255, 255, 255) !important;
 }

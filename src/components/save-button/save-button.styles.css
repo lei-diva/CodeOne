@@ -1,44 +1,35 @@
-
 .save_button {
-    width: 38px;
-    height: 38px;
-    margin:auto;
-
-
+  width: 38px;
+  height: 38px;
+  margin: auto;
 }
 
-
 .save_button:hover {
-    transform: scale(1.01);
-
+  transform: scale(1.01);
 }
 
 .save_button:focus {
-    outline: none;
-    box-shadow: none;
-    border:none;
-    transform: scale(1);
+  outline: none;
+  box-shadow: none;
+  border: none;
+  transform: scale(1);
 }
-
 
 @media (max-width: 991px) {
-    .save-text{
-        margin-top: -10px !important;
-    }
+  .save-text {
+    margin-top: -10px !important;
+  }
 }
 
-
 #missingName {
-    display:none;
+  display: none;
 }
 
 #success {
-    display:none;
+  display: none;
 }
 
-
-
-.toast.show{
-    height: 38px;
-    margin: auto;
+.toast.show {
+  height: 38px;
+  margin: auto;
 }
