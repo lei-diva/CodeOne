@@ -5,7 +5,6 @@ const ppFirefox = require("puppeteer-firefox"),
 const uuid = uuidv4();
 let page, browser, context, userauth, logoutSuccess;
 
-
 beforeEach(async () => {
   browser = await ppFirefox.launch({ headless: false, defaultViewport: null });
   page = await browser.newPage();
@@ -15,8 +14,6 @@ beforeEach(async () => {
 afterEach(async () => {
   await browser.close();
 });
-
-
 
 test("Register an account", async done => {
   userauth = await registerAccount(uuid, page);
@@ -79,7 +76,7 @@ test("Navigation as logged in user", async done => {
       hidden: true
     }
   );
-  console.log("HERE");
+
   const username = await page.$eval(
     "#root > div > div.display-name > div > div > h2",
     e => e.innerHTML
