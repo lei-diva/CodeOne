@@ -1,108 +1,115 @@
-const puppeteer = require("puppeteer"),
-  assert = require("assert");
+const ppChrome = require("puppeteer"),
+  viewportAndEmulation = require("./viewportAndEmulation.util");
 
-let browser, page;
-
-async function setLargerViewport() {
-  await page.setViewport({ width: 1440, height: 767 });
-}
+let page, browser, context;
 
 beforeAll(async () => {
-  browser = await puppeteer.launch();
-});
-beforeEach(async () => {
-  context = await browser.createIncognitoBrowserContext();
-  page = await context.newPage();
-  await page.goto("https://codeone.herokuapp.com/");
-});
-
-afterEach(async () => {
-  await context.close();
+  browser = await ppChrome.launch({ headless: false });
 });
 
 afterAll(async () => {
   await browser.close();
 });
 
-test("default homepage url", async () => {
-  const url = await page.url();
-  assert(url === "https://codeone.herokuapp.com/");
-});
+describe.each(viewportAndEmulation)(
+  "Chrome User Authentication tests with Screen Size Emulation",
+  (name, viewportAndEmulationFunc, uuid) => {
+    beforeEach(async () => {
+      context = await browser.createIncognitoBrowserContext();
+      page = await context.newPage();
+      await viewportAndEmulationFunc(page, ppChrome);
+      await page.goto("https://codeone.herokuapp.com/");
+    });
 
-test("logo url routing", async () => {
-  await page.click("a.logo.navbar-brand");
-  const url = await page.url();
-  assert(url === "https://codeone.herokuapp.com/");
-});
+    afterEach(async () => {
+      await context.close();
+    });
+    test("default homepage url", async () => {
+      const url = await page.url();
+      expect(url.toString()).toBe("https://codeone.herokuapp.com/");
+    });
 
-test("home nav route", async () => {
-  await setLargerViewport();
-  await page.click(
-    "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(1)"
-  );
-  const url = await page.url();
-  assert(url === "https://codeone.herokuapp.com/#top");
-});
+    test("logo url routing", async () => {
+      await page.click("a.logo.navbar-brand");
+      const url = await page.url();
+      expect(url.toString()).toBe("https://codeone.herokuapp.com/");
+    });
 
-test("home responsive nav route ", async () => {
-  await page.click("#root > div > nav > button");
-  await page.click(
-    "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(1)"
-  );
-  const url = await page.url();
-  assert(url === "https://codeone.herokuapp.com/#top");
-});
+    test(`${name} home nav route`, async () => {
+      if (name != "Desktop Viewport:") {
+        await page.click("#root > div > nav > button");
+      }
+      await page.waitForSelector(
+        "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(1)",
+        { visible: true }
+      );
+      await Promise.all([
+        page.click(
+          "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(1)"
+        ),
+        page.waitForNavigation()
+      ]);
 
-test("feautures nav route", async () => {
-  await setLargerViewport();
-  await page.click(
-    "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(2)"
-  );
-  const url = await page.url();
-  assert(url === "https://codeone.herokuapp.com/#features");
-});
+      const url = await page.url();
+      expect(url.toString()).toBe("https://codeone.herokuapp.com/#top");
+    });
 
-test("feautures responsive nav route", async () => {
-  await page.click("#root > div > nav > button");
-  await page.click(
-    "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(2)"
-  );
-  const url = await page.url();
-  assert(url === "https://codeone.herokuapp.com/#features");
-});
+    test(`${name} feautures nav route`, async () => {
+      if (name != "Desktop Viewport:") {
+        await page.click("#root > div > nav > button");
+      }
+      await page.waitForSelector(
+        "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(2)",
+        { visible: true }
+      );
+      await Promise.all([
+        page.click(
+          "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(2)"
+        ),
+        page.waitForNavigation()
+      ]);
+      const url = await page.url();
+      expect(url.toString()).toBe("https://codeone.herokuapp.com/#features");
+    });
 
-test("blog nav route", async () => {
-  await setLargerViewport();
-  await page.click(
-    "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(3)"
-  );
-  const url = await page.url();
-  assert(url === "https://codeone.herokuapp.com/#blog-section");
-});
+    test(`${name} blog nav route`, async () => {
+      if (name != "Desktop Viewport:") {
+        await page.click("#root > div > nav > button");
+      }
+      await page.waitForSelector(
+        "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(3)",
+        { visible: true }
+      );
 
-test("blog responsive nav route", async () => {
-  await page.click("#root > div > nav > button");
-  await page.click(
-    "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(3)"
-  );
-  const url = await page.url();
-  assert(url === "https://codeone.herokuapp.com/#blog-section");
-});
+      await Promise.all([
+        page.click(
+          "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(3)"
+        ),
+        page.waitForNavigation()
+      ]);
+      const url = await page.url();
+      expect(url.toString()).toBe(
+        "https://codeone.herokuapp.com/#blog-section"
+      );
+    });
 
-test("contact nav route", async () => {
-  await setLargerViewport();
-  await page.click(
-    "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(4)"
-  );
-  const url = await page.url;
-  assert(url, "https://codeone.herokuapp.com/#contact");
-});
+    test(`${name} contact nav route`, async () => {
+      if (name != "Desktop Viewport:") {
+        await page.click("#root > div > nav > button");
+      }
+      await page.waitForSelector(
+        "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(4)",
+        { visible: true }
+      );
+      await Promise.all([
+        page.click(
+          "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(4)"
+        ),
+        page.waitForNavigation()
+      ]);
 
-test("contact responsive nav route", async () => {
-  await page.click("#root > div > nav > button");
-  await page.click(
-    "#responsive-navbar-nav > div.mr-auto.home-display.navbar-nav > a:nth-child(4)"
-  );
-  const url = await page.url;
-  assert(url, "https://codeone.herokuapp.com/#contact");
-});
+      const url = await page.url();
+      expect(url.toString()).toBe("https://codeone.herokuapp.com/#contact");
+    });
+  }
+);

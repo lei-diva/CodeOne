@@ -1,10 +1,8 @@
-const { v4: uuidv4 } = require("uuid");
-
 const viewportAndEmulation = [
-  ["Desktop Viewport:", desktopViewport, uuidv4()],
-  ["Iphone 5s Viewport:", emulateiPhone5s, uuidv4()],
-  ["Iphone 10 Viewport:", emulateiPhoneX, uuidv4()],
-  ["Galaxy Viewport:", emulateGalaxy, uuidv4()]
+  ["Desktop Viewport:", desktopViewport],
+  ["Iphone 5s Viewport:", emulateiPhone5s],
+  ["Iphone 10 Viewport:", emulateiPhoneX],
+  ["Galaxy Viewport:", emulateGalaxy]
 ];
 
 async function desktopViewport(page) {
