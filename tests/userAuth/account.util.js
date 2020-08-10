@@ -63,7 +63,7 @@ async function loginAccount(uuid, page) {
   );
   await Promise.all([
     page.click(
-      "body > div.fade.modal.show > div > div > div > button:nth-child(3)" //Continue Button
+      "body > div.fade.modal.show > div > div > div > button:nth-child(4)" //Continue Button
     ),
     (userauth = await page.waitForSelector(
       "#responsive-navbar-nav > div:nth-child(3) > a:nth-child(2) > div > button > img", //Profile Icon
