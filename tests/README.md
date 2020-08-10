@@ -1,5 +1,5 @@
 ## End to end tests with Puppeteer and Jest 
-**Total: 50 tests(Estimated run time: 330s)**
+**Total: 50 tests** (Estimated run time ~ 330s)
 
 ## To run tests: 
 ### Clone the Repository
