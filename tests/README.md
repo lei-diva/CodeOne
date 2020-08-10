@@ -1,4 +1,5 @@
-## End to end tests with Puppeteer and Jest
+## End to end tests with Puppeteer and Jest 
+**Total: 50 tests(Estimated run time: 330s)**
 
 ## To run tests: 
 ### Clone the Repository
@@ -9,10 +10,10 @@
 `yarn test`
 
 ## Notes:
-**Firefox tests are flaky due to deprecation of 'puppeteer-firefox'**
-You can remove .js extension from firefox tests to run without them (decreasing run time due to less errors);
-Run without firefox tests to decrease run time and errors, remove .js extension from firefox tests 
-
+* **Tests should remain and be run in non headless mode**
+* **Tests may fail due to network timeout. Please retry**
+* **Firefox tests are flaky due to deprecation of 'puppeteer-firefox'**
+  * Run without firefox tests to decrease run time and errors.
 
 
 
