@@ -36,7 +36,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --coverage --watchAll=false",
+    "test": "jest --coverage ----maxWorkers=3 --no-cache --ci",
     "eject": "react-scripts eject",
     "test:coverage": "yarn test --coverage --watchAll=false"
   },
