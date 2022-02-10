@@ -15,7 +15,7 @@
     "bootstrap": "^4.4.1",
     "firebase": "^7.11.0",
     "jquery": "^3.4.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nyc": "^15.1.0",
     "puppeteer": "^5.2.1",
     "puppeteer-firefox": "^0.5.1",
